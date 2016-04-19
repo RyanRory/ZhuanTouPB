@@ -24,6 +24,8 @@
 		A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */; };
 		A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */; };
 		A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */; };
+		A44902041CC5D5E400021EFF /* PBAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902031CC5D5E400021EFF /* PBAnimator.m */; };
+		A44902071CC5F30B00021EFF /* PBRegisterNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902061CC5F30B00021EFF /* PBRegisterNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,10 @@
 		A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterSmsCodeViewController.m; sourceTree = "<group>"; };
 		A44901FF1CC4EB2E00021EFF /* PBRegisterPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterPasswordViewController.h; sourceTree = "<group>"; };
 		A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterPasswordViewController.m; sourceTree = "<group>"; };
+		A44902021CC5D5E400021EFF /* PBAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAnimator.h; sourceTree = "<group>"; };
+		A44902031CC5D5E400021EFF /* PBAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAnimator.m; sourceTree = "<group>"; };
+		A44902051CC5F30B00021EFF /* PBRegisterNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterNavigationController.h; sourceTree = "<group>"; };
+		A44902061CC5F30B00021EFF /* PBRegisterNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +288,8 @@
 		A44901E51CC4AE7C00021EFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A44902051CC5F30B00021EFF /* PBRegisterNavigationController.h */,
+				A44902061CC5F30B00021EFF /* PBRegisterNavigationController.m */,
 				A44901F91CC4EAFD00021EFF /* PBRegisterMobileViewController.h */,
 				A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */,
 				A44901FC1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.h */,
@@ -322,6 +330,8 @@
 			children = (
 				A44901EE1CC4B90C00021EFF /* PBBaseModel.h */,
 				A44901EF1CC4B90C00021EFF /* PBBaseModel.m */,
+				A44902021CC5D5E400021EFF /* PBAnimator.h */,
+				A44902031CC5D5E400021EFF /* PBAnimator.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -530,9 +540,11 @@
 				A44901DE1CC4A6A100021EFF /* PBLoginPasswordViewController.m in Sources */,
 				A44901F01CC4B90C00021EFF /* PBBaseModel.m in Sources */,
 				A449019E1CC497C800021EFF /* AppDelegate.m in Sources */,
+				A44902071CC5F30B00021EFF /* PBRegisterNavigationController.m in Sources */,
 				A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */,
 				A44901D41CC49D7400021EFF /* PBNavigationController.m in Sources */,
 				A449019B1CC497C800021EFF /* main.m in Sources */,
+				A44902041CC5D5E400021EFF /* PBAnimator.m in Sources */,
 				A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */,
 				A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */,
 				A44901D11CC49B0B00021EFF /* PBBaseViewController.m in Sources */,

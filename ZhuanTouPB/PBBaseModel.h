@@ -10,4 +10,6 @@
 
 @interface PBBaseModel : NSObject
 
++ (BOOL)isCurrentViewControllerVisible:(UIViewController*)viewController;
+
 @end

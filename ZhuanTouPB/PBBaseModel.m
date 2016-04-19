@@ -10,4 +10,9 @@
 
 @implementation PBBaseModel
 
++ (BOOL)isCurrentViewControllerVisible:(UIViewController *)viewController
+{
+    return (viewController.isViewLoaded && viewController.view.window);
+}
+
 @end
