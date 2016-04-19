@@ -20,6 +20,10 @@
 		A44901DB1CC4A68700021EFF /* PBLoginMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901DA1CC4A68700021EFF /* PBLoginMobileViewController.m */; };
 		A44901DE1CC4A6A100021EFF /* PBLoginPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901DD1CC4A6A100021EFF /* PBLoginPasswordViewController.m */; };
 		A44901F01CC4B90C00021EFF /* PBBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901EF1CC4B90C00021EFF /* PBBaseModel.m */; };
+		A44901F61CC4BDD600021EFF /* PBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901F51CC4BDD600021EFF /* PBWebView.m */; };
+		A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */; };
+		A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */; };
+		A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,14 @@
 		A44901DD1CC4A6A100021EFF /* PBLoginPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLoginPasswordViewController.m; sourceTree = "<group>"; };
 		A44901EE1CC4B90C00021EFF /* PBBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBaseModel.h; sourceTree = "<group>"; };
 		A44901EF1CC4B90C00021EFF /* PBBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBaseModel.m; sourceTree = "<group>"; };
+		A44901F41CC4BDD600021EFF /* PBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebView.h; sourceTree = "<group>"; };
+		A44901F51CC4BDD600021EFF /* PBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebView.m; sourceTree = "<group>"; };
+		A44901F91CC4EAFD00021EFF /* PBRegisterMobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterMobileViewController.h; sourceTree = "<group>"; };
+		A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterMobileViewController.m; sourceTree = "<group>"; };
+		A44901FC1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterSmsCodeViewController.h; sourceTree = "<group>"; };
+		A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterSmsCodeViewController.m; sourceTree = "<group>"; };
+		A44901FF1CC4EB2E00021EFF /* PBRegisterPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterPasswordViewController.h; sourceTree = "<group>"; };
+		A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterPasswordViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +151,7 @@
 		A44901981CC497C800021EFF /* ZhuanTouPB */ = {
 			isa = PBXGroup;
 			children = (
+				A44901F81CC4C47A00021EFF /* AppDelegate */,
 				A44901D51CC49FA300021EFF /* Base */,
 				A44901D61CC49FFE00021EFF /* Launch */,
 				A44901D71CC4A07A00021EFF /* Login */,
@@ -183,8 +196,6 @@
 		A44901D51CC49FA300021EFF /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				A449019C1CC497C800021EFF /* AppDelegate.h */,
-				A449019D1CC497C800021EFF /* AppDelegate.m */,
 				A44901E91CC4AEBE00021EFF /* Model */,
 				A44901EA1CC4AEC500021EFF /* View */,
 				A44901E81CC4AEAE00021EFF /* Controller */,
@@ -271,6 +282,12 @@
 		A44901E51CC4AE7C00021EFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A44901F91CC4EAFD00021EFF /* PBRegisterMobileViewController.h */,
+				A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */,
+				A44901FC1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.h */,
+				A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */,
+				A44901FF1CC4EB2E00021EFF /* PBRegisterPasswordViewController.h */,
+				A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -312,8 +329,19 @@
 		A44901EA1CC4AEC500021EFF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A44901F41CC4BDD600021EFF /* PBWebView.h */,
+				A44901F51CC4BDD600021EFF /* PBWebView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A44901F81CC4C47A00021EFF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A449019C1CC497C800021EFF /* AppDelegate.h */,
+				A449019D1CC497C800021EFF /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,11 +526,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44901DB1CC4A68700021EFF /* PBLoginMobileViewController.m in Sources */,
+				A44901F61CC4BDD600021EFF /* PBWebView.m in Sources */,
 				A44901DE1CC4A6A100021EFF /* PBLoginPasswordViewController.m in Sources */,
 				A44901F01CC4B90C00021EFF /* PBBaseModel.m in Sources */,
 				A449019E1CC497C800021EFF /* AppDelegate.m in Sources */,
+				A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */,
 				A44901D41CC49D7400021EFF /* PBNavigationController.m in Sources */,
 				A449019B1CC497C800021EFF /* main.m in Sources */,
+				A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */,
+				A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */,
 				A44901D11CC49B0B00021EFF /* PBBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

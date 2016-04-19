@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -14,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="rXg-d8-hEI" kind="relationship" relationship="rootViewController" id="N9Z-W3-P7o"/>
+                        <segue destination="hUU-yF-o0h" kind="relationship" relationship="rootViewController" id="wxA-Ih-FNc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phY-qn-2xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1566" y="731"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Mobile View Controller-->
         <scene sceneID="FIO-Mk-lfe">
             <objects>
-                <viewController id="hUU-yF-o0h" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PBRegisterMobileViewController" id="hUU-yF-o0h" customClass="PBRegisterMobileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ksu-ib-JBi"/>
                         <viewControllerLayoutGuide type="bottom" id="wTw-fW-85W"/>
@@ -94,9 +95,54 @@
                     <view key="view" contentMode="scaleToFill" id="5fM-4y-ZQ3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入您的手机号码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4m-vP-zQI">
+                                <rect key="frame" x="20" y="235" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ada-Ho-OoP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSG-Lv-QMu">
+                                <rect key="frame" x="20" y="235" width="560" height="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="l7y-jr-Knb"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="go"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号也将作为您的登录账户号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzd-d3-EyF">
+                                <rect key="frame" x="20" y="273" width="560" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="CWE-BH-Ao2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50980392156862742" green="0.36862745098039218" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="n4m-vP-zQI" firstAttribute="trailing" secondItem="5fM-4y-ZQ3" secondAttribute="trailingMargin" id="6La-Si-Ina"/>
+                            <constraint firstItem="n4m-vP-zQI" firstAttribute="centerY" secondItem="5fM-4y-ZQ3" secondAttribute="centerY" constant="-50" id="IIP-z5-vUx"/>
+                            <constraint firstItem="n4m-vP-zQI" firstAttribute="leading" secondItem="5fM-4y-ZQ3" secondAttribute="leadingMargin" id="PUF-Ib-WWw"/>
+                            <constraint firstItem="Gzd-d3-EyF" firstAttribute="trailing" secondItem="5fM-4y-ZQ3" secondAttribute="trailingMargin" id="VwM-hB-O2j"/>
+                            <constraint firstItem="NSG-Lv-QMu" firstAttribute="leading" secondItem="5fM-4y-ZQ3" secondAttribute="leadingMargin" id="btN-Sd-7SG"/>
+                            <constraint firstItem="Gzd-d3-EyF" firstAttribute="leading" secondItem="5fM-4y-ZQ3" secondAttribute="leadingMargin" id="dc0-e2-9FX"/>
+                            <constraint firstItem="NSG-Lv-QMu" firstAttribute="top" secondItem="n4m-vP-zQI" secondAttribute="top" id="pr5-ng-NTX"/>
+                            <constraint firstItem="Gzd-d3-EyF" firstAttribute="top" secondItem="NSG-Lv-QMu" secondAttribute="bottom" constant="8" id="tNl-4y-jaW"/>
+                            <constraint firstItem="NSG-Lv-QMu" firstAttribute="trailing" secondItem="5fM-4y-ZQ3" secondAttribute="trailingMargin" id="tbf-RW-UNa"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YKF-cH-xi5"/>
                     <connections>
+                        <outlet property="descriptionLabel" destination="Gzd-d3-EyF" id="2sq-ez-Yrg"/>
+                        <outlet property="mobileTextField" destination="NSG-Lv-QMu" id="Spi-gI-Lh8"/>
+                        <outlet property="placeholderLabel" destination="n4m-vP-zQI" id="Fr6-wf-Wk2"/>
                         <segue destination="0Cg-Ig-fPX" kind="show" id="Ecg-AR-fK4"/>
                     </connections>
                 </viewController>
@@ -104,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="938" y="1381"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Sms Code View Controller-->
         <scene sceneID="jxh-uf-JK9">
             <objects>
-                <viewController id="0Cg-Ig-fPX" sceneMemberID="viewController">
+                <viewController id="0Cg-Ig-fPX" customClass="PBRegisterSmsCodeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FcK-XO-ro2"/>
                         <viewControllerLayoutGuide type="bottom" id="ro8-Ln-dNV"/>
@@ -115,7 +161,7 @@
                     <view key="view" contentMode="scaleToFill" id="Qbz-1n-bTj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.80392156862745101" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <segue destination="F30-MZ-IQP" kind="show" id="gNU-hQ-RMP"/>
@@ -125,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="1566" y="1381"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Password View Controller-->
         <scene sceneID="RV3-wa-tZu">
             <objects>
-                <viewController id="F30-MZ-IQP" sceneMemberID="viewController">
+                <viewController id="F30-MZ-IQP" customClass="PBRegisterPasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tsN-pd-YnW"/>
                         <viewControllerLayoutGuide type="bottom" id="fRK-X1-jTb"/>
@@ -136,7 +182,7 @@
                     <view key="view" contentMode="scaleToFill" id="yNK-Zn-EDn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.67450980392156867" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <segue destination="dDd-VW-d6e" kind="show" id="yvl-Xh-i7L"/>
@@ -165,4 +211,7 @@
             <point key="canvasLocation" x="2816" y="1377"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wxA-Ih-FNc"/>
+    </inferredMetricsTieBreakers>
 </document>
