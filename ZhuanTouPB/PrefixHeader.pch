@@ -13,8 +13,11 @@
 
 #import "PBBaseModel.h"
 #import "PBAnimator.h"
+#import "PBSmartPlaceholderTextField.h"
+#import "PBBorderedButton.h"
 #import "Const.h"
 #import "AFNetworking.h"
 #import "MJRefresh.h"
+#import "KeyboardManager.h"
 
 #endif /* PrefixHeader_pch */

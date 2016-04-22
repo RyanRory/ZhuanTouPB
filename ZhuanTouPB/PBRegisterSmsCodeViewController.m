@@ -14,7 +14,7 @@
 
 @implementation PBRegisterSmsCodeViewController
 
-@synthesize placeholderLabel, smsCodeTextField, descriptionLabel, errorLabel, smsCodeButton;
+@synthesize smsCodeTextField, descriptionLabel, errorLabel, smsCodeButton;
 
 #pragma ViewController LifeCycle
 - (void)viewDidLoad {
@@ -22,20 +22,19 @@
     
     [self initNavigationBar];
     
-    [smsCodeTextField addTarget:self action:@selector(editingChanged:) forControlEvents:UIControlEventEditingChanged];
+    [smsCodeTextField setPlaceHolderText:@"请输入您收到的验证码"];
+    [smsCodeTextField setPlaceHolderChangeText:@"验证码"];
     smsCodeTextField.delegate = self;
     
     [smsCodeButton addTarget:self action:@selector(clickSmsCode:) forControlEvents:UIControlEventTouchUpInside];
     
-    lastLength = 0;
-    
     //进入页面自动发送验证码
     [self sendSmsCode:NO];
-    [smsCodeButton setUserInteractionEnabled:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [smsCodeTextField becomeFirstResponder];
 }
 
@@ -67,6 +66,7 @@
 {
     secondsCountDown = 60;
     timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeFireMethod) userInfo:nil repeats:YES];
+    [smsCodeButton setUserInteractionEnabled:NO];
 }
 
 #pragma didReceiveMemoryWarning
@@ -96,27 +96,6 @@
 - (void)back:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-#pragma TextField Function
-- (void)shouldLabelAnimated:(UILabel*)sender textField:(UITextField*)textField
-{
-    if (textField.text.length == 1 && lastLength == 0)
-    {
-        sender.text = @"手机验证码";
-        [PBAnimator labelAnimation:YES label:placeholderLabel];
-    }
-    if (textField.text.length == 0 && lastLength == 1)
-    {
-        sender.text= @"请输入您收到的手机验证码";
-        [PBAnimator labelAnimation:NO label:placeholderLabel];
-    }
-    lastLength = textField.text.length;
-}
-
-- (void)editingChanged:(UITextField*)sender
-{
-    [self shouldLabelAnimated:placeholderLabel textField:sender];
 }
 
 #pragma TextField Delegate

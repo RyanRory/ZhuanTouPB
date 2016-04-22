@@ -7,16 +7,12 @@
 //
 
 #import "PBBaseViewController.h"
+#import "PBRegisterDataModel.h"
+#import "PBRegisterSuccessViewController.h"
 
 @interface PBRegisterPasswordViewController : PBBaseViewController<UITextFieldDelegate>
-{
-    unsigned long lastLength; //记录textfield上一次输入的字符长度，用来判断placeholder执行动画
-    NSString *passwordTextFieldStr;
-    BOOL isSecureTextEntry;
-}
 
-@property (strong, nonatomic) IBOutlet UILabel *placeholderLabel;
-@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet PBSmartPlaceholderTextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *secureEntryButton;
 

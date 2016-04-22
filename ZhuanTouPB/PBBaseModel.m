@@ -15,4 +15,17 @@
     return (viewController.isViewLoaded && viewController.view.window);
 }
 
++ (NSString*)formatterNumberWithoutDecimal:(NSNumber*)number
+{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
+    [formatter setPositiveFormat:@"###,##0"];
+    return [formatter stringFromNumber:number];
+}
+
++ (NSString*)formatterNumberWithDecimal:(NSNumber*)number
+{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
+    [formatter setPositiveFormat:@"###,##0.00"];
+    return [formatter stringFromNumber:number];
+}
 @end

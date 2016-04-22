@@ -10,61 +10,6 @@
 
 @implementation PBAnimator
 
-+ (void)labelAnimation:(BOOL)flyUp label:(UILabel*)sender
-{
-    //平移动画
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-    float x = sender.bounds.size.width/8;
-    if (flyUp)
-    {
-        NSLog(@"wwwwww");
-        animation.byValue = [NSValue valueWithCGPoint:CGPointMake(0-x, -28)];
-    }
-    else
-    {
-        animation.byValue = [NSValue valueWithCGPoint:CGPointMake(x, 28)];
-    }
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
-    animation.repeatCount = 0;
-    [animation setDuration:0.2f];
-    [sender.layer addAnimation:animation forKey:nil];
-    //透明度渐变动画
-    CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    if (flyUp)
-    {
-        opacityAnimation.fromValue = [NSNumber numberWithFloat:0.4];
-        opacityAnimation.toValue = [NSNumber numberWithFloat:1];
-    }
-    else
-    {
-        opacityAnimation.fromValue = [NSNumber numberWithFloat:1];
-        opacityAnimation.toValue = [NSNumber numberWithFloat:0.4];
-    }
-    opacityAnimation.removedOnCompletion=NO;
-    opacityAnimation.fillMode=kCAFillModeForwards;
-    opacityAnimation.repeatCount = 0;
-    [opacityAnimation setDuration:0.2f];
-    [sender.layer addAnimation:opacityAnimation forKey:nil];
-    //缩放动画
-    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    if (flyUp)
-    {
-        scaleAnimation.fromValue = [NSNumber numberWithFloat:1];
-        scaleAnimation.toValue = [NSNumber numberWithFloat:0.75];
-    }
-    else
-    {
-        scaleAnimation.fromValue = [NSNumber numberWithFloat:0.75];
-        scaleAnimation.toValue = [NSNumber numberWithFloat:1];
-    }
-    scaleAnimation.removedOnCompletion=NO;
-    scaleAnimation.fillMode=kCAFillModeForwards;
-    scaleAnimation.repeatCount = 0;
-    [scaleAnimation setDuration:0.2f];
-    [sender.layer addAnimation:scaleAnimation forKey:nil];
-}
-
 //抖动动画
 + (void)shakeView:(UIView*)viewToShake
 {

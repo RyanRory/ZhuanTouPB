@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C69BB60503BCC7A20948F6CD'
+               BlueprintIdentifier = 'B367C23F2C4BCF935BEB2DE4'
                BlueprintName = 'SCNumberKeyBoard'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libSCNumberKeyBoard.a'>

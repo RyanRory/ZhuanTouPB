@@ -14,7 +14,7 @@
 
 @implementation PBRegisterPasswordViewController
 
-@synthesize placeholderLabel, passwordTextField, descriptionLabel, secureEntryButton;
+@synthesize passwordTextField, descriptionLabel, secureEntryButton;
 
 #pragma ViewController LifeCycle
 - (void)viewDidLoad {
@@ -22,18 +22,18 @@
     
     [self initNavigationBar];
     
-    [passwordTextField addTarget:self action:@selector(editingChanged:) forControlEvents:UIControlEventEditingChanged];
+    [passwordTextField setPlaceHolderText:@"请设置您的登录密码"];
+    [passwordTextField setPlaceHolderChangeText:@"登录密码"];
+    [passwordTextField setSecureTextEntry:YES];
     passwordTextField.delegate = self;
     
-    lastLength = 0;
-    passwordTextFieldStr = @"";
-    isSecureTextEntry = YES;
     secureEntryButton.selected = YES;
     [secureEntryButton addTarget:self action:@selector(isSecureTextEntry:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [passwordTextField becomeFirstResponder];
 }
 
@@ -47,24 +47,15 @@
 - (void)isSecureTextEntry:(UIButton*)sender
 {
     sender.selected = !sender.selected;
-    isSecureTextEntry = sender.selected;
+    [passwordTextField setSecureTextEntry:sender.selected];
     //实现textfield安全输入和正常输入的文字转换
     if (sender.selected)
     {
         [sender setImage:[UIImage imageNamed:@"EyeClose"] forState:UIControlStateNormal];
-        if (passwordTextField.text.length > 0)
-        {
-            passwordTextField.text = @"";
-            for (int i=0; i<passwordTextFieldStr.length; i++)
-            {
-                passwordTextField.text = [passwordTextField.text stringByAppendingString:@"*"];
-            }
-        }
     }
     else
     {
         [sender setImage:[UIImage imageNamed:@"EyeOpen"] forState:UIControlStateNormal];
-        passwordTextField.text = passwordTextFieldStr;
     }
 }
 
@@ -82,47 +73,13 @@
 
 - (void)next:(id)sender
 {
-    
+    PBRegisterSuccessViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBRegisterSuccessViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)back:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-#pragma TextField Function
-- (void)shouldLabelAnimated:(UILabel*)sender textField:(UITextField*)textField
-{
-    if (textField.text.length == 1 && lastLength == 0)
-    {
-        sender.text = @"登录密码";
-        [PBAnimator labelAnimation:YES label:placeholderLabel];
-    }
-    if (textField.text.length == 0 && lastLength == 1)
-    {
-        sender.text= @"请设置您的登录密码";
-        [PBAnimator labelAnimation:NO label:placeholderLabel];
-    }
-    lastLength = textField.text.length;
-}
-
-- (void)editingChanged:(UITextField*)sender
-{
-    //实现textfield安全输入，记录textfield实际文字
-    if (sender.text.length > lastLength)
-    {
-        if (isSecureTextEntry && lastLength > 0)
-        {
-            passwordTextField.text = [passwordTextField.text stringByReplacingCharactersInRange:NSMakeRange(lastLength-1, 1) withString:@"*"];
-        }
-        passwordTextFieldStr = [passwordTextFieldStr stringByAppendingString:[passwordTextField.text substringWithRange:NSMakeRange(lastLength, 1)]];
-    }
-    else
-    {
-        passwordTextFieldStr = [passwordTextFieldStr substringWithRange:NSMakeRange(0, passwordTextField.text.length)];
-    }
-    
-    [self shouldLabelAnimated:placeholderLabel textField:sender];
 }
 
 #pragma TextField Delegate

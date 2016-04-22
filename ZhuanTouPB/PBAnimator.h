@@ -10,7 +10,6 @@
 
 @interface PBAnimator : NSObject
 
-+ (void)labelAnimation:(BOOL)flyUp label:(UILabel*)sender;
 + (void)shakeView:(UIView*)viewToShake;
 + (void)transpositionAnimation:(UIView*)viewToMove byValue:(NSValue*)value duration:(float)duration;
 + (void)transopacityAnimation:(UIView*)viewToTrans fromValue:(float)fromValue toValue:(float)toValue duration:(float)duration;

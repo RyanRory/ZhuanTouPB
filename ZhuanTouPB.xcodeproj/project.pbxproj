@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8770FC6E26FB83A900D426C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B005BFF3B2A4946CA64B700 /* libPods.a */; };
+		A4402B871CC7391C003136D8 /* PBRegisterDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B861CC7391C003136D8 /* PBRegisterDataModel.m */; };
+		A4402B8A1CC743E3003136D8 /* PBSmartPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B891CC743E3003136D8 /* PBSmartPlaceholderTextField.m */; };
+		A4402B8D1CC748AC003136D8 /* PBRegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B8C1CC748AC003136D8 /* PBRegisterSuccessViewController.m */; };
+		A4402B961CC78F15003136D8 /* PBStructuredNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B951CC78F15003136D8 /* PBStructuredNavigationController.m */; };
+		A4402B991CC793B4003136D8 /* PBStructuredFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B981CC793B4003136D8 /* PBStructuredFirstViewController.m */; };
+		A4402B9C1CC7967C003136D8 /* PBBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B9B1CC7967C003136D8 /* PBBorderedButton.m */; };
+		A4402B9F1CC87759003136D8 /* PBButtonOnlyEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B9E1CC87759003136D8 /* PBButtonOnlyEngine.m */; };
+		A4402BA21CC881F1003136D8 /* PBStructuredChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BA11CC881F1003136D8 /* PBStructuredChooseView.m */; };
+		A4402BA51CC8CFD7003136D8 /* PBStructuredSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BA41CC8CFD7003136D8 /* PBStructuredSecondViewController.m */; };
+		A4402BA81CC8E0A3003136D8 /* PBStructuredThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BA71CC8E0A3003136D8 /* PBStructuredThirdViewController.m */; };
+		A4402BAB1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BAA1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m */; };
+		A4402BAE1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BAD1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m */; };
+		A4402BB11CCA31E6003136D8 /* PBStructuredInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BB01CCA31E6003136D8 /* PBStructuredInputTableViewCell.m */; };
 		A449019B1CC497C800021EFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A449019A1CC497C800021EFF /* main.m */; };
 		A449019E1CC497C800021EFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A449019D1CC497C800021EFF /* AppDelegate.m */; };
 		A44901A41CC497C800021EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44901A21CC497C800021EFF /* Main.storyboard */; };
@@ -49,6 +62,32 @@
 		757CC8A21AD8798964E230EC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B005BFF3B2A4946CA64B700 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8942694027F7F8441629D7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A4402B851CC7391C003136D8 /* PBRegisterDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterDataModel.h; sourceTree = "<group>"; };
+		A4402B861CC7391C003136D8 /* PBRegisterDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterDataModel.m; sourceTree = "<group>"; };
+		A4402B881CC743E3003136D8 /* PBSmartPlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSmartPlaceholderTextField.h; sourceTree = "<group>"; };
+		A4402B891CC743E3003136D8 /* PBSmartPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSmartPlaceholderTextField.m; sourceTree = "<group>"; };
+		A4402B8B1CC748AC003136D8 /* PBRegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterSuccessViewController.h; sourceTree = "<group>"; };
+		A4402B8C1CC748AC003136D8 /* PBRegisterSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterSuccessViewController.m; sourceTree = "<group>"; };
+		A4402B941CC78F15003136D8 /* PBStructuredNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredNavigationController.h; sourceTree = "<group>"; };
+		A4402B951CC78F15003136D8 /* PBStructuredNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredNavigationController.m; sourceTree = "<group>"; };
+		A4402B971CC793B4003136D8 /* PBStructuredFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredFirstViewController.h; sourceTree = "<group>"; };
+		A4402B981CC793B4003136D8 /* PBStructuredFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredFirstViewController.m; sourceTree = "<group>"; };
+		A4402B9A1CC7967C003136D8 /* PBBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBorderedButton.h; sourceTree = "<group>"; };
+		A4402B9B1CC7967C003136D8 /* PBBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBorderedButton.m; sourceTree = "<group>"; };
+		A4402B9D1CC87759003136D8 /* PBButtonOnlyEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBButtonOnlyEngine.h; sourceTree = "<group>"; };
+		A4402B9E1CC87759003136D8 /* PBButtonOnlyEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBButtonOnlyEngine.m; sourceTree = "<group>"; };
+		A4402BA01CC881F1003136D8 /* PBStructuredChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredChooseView.h; sourceTree = "<group>"; };
+		A4402BA11CC881F1003136D8 /* PBStructuredChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredChooseView.m; sourceTree = "<group>"; };
+		A4402BA31CC8CFD7003136D8 /* PBStructuredSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredSecondViewController.h; sourceTree = "<group>"; };
+		A4402BA41CC8CFD7003136D8 /* PBStructuredSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredSecondViewController.m; sourceTree = "<group>"; };
+		A4402BA61CC8E0A3003136D8 /* PBStructuredThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredThirdViewController.h; sourceTree = "<group>"; };
+		A4402BA71CC8E0A3003136D8 /* PBStructuredThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredThirdViewController.m; sourceTree = "<group>"; };
+		A4402BA91CC8E618003136D8 /* PBStructuredTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredTitleTableViewCell.h; sourceTree = "<group>"; };
+		A4402BAA1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredTitleTableViewCell.m; sourceTree = "<group>"; };
+		A4402BAC1CCA0699003136D8 /* PBStructuredOptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredOptionTableViewCell.h; sourceTree = "<group>"; };
+		A4402BAD1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredOptionTableViewCell.m; sourceTree = "<group>"; };
+		A4402BAF1CCA31E6003136D8 /* PBStructuredInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredInputTableViewCell.h; sourceTree = "<group>"; };
+		A4402BB01CCA31E6003136D8 /* PBStructuredInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredInputTableViewCell.m; sourceTree = "<group>"; };
 		A44901961CC497C800021EFF /* ZhuanTouPB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuanTouPB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A449019A1CC497C800021EFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A449019C1CC497C800021EFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +171,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A4402B901CC78E4F003136D8 /* StructuredProduct */ = {
+			isa = PBXGroup;
+			children = (
+				A4402B931CC78E99003136D8 /* Model */,
+				A4402B921CC78E8E003136D8 /* View */,
+				A4402B911CC78E85003136D8 /* Controller */,
+			);
+			name = StructuredProduct;
+			sourceTree = "<group>";
+		};
+		A4402B911CC78E85003136D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4402B941CC78F15003136D8 /* PBStructuredNavigationController.h */,
+				A4402B951CC78F15003136D8 /* PBStructuredNavigationController.m */,
+				A4402B971CC793B4003136D8 /* PBStructuredFirstViewController.h */,
+				A4402B981CC793B4003136D8 /* PBStructuredFirstViewController.m */,
+				A4402BA31CC8CFD7003136D8 /* PBStructuredSecondViewController.h */,
+				A4402BA41CC8CFD7003136D8 /* PBStructuredSecondViewController.m */,
+				A4402BA61CC8E0A3003136D8 /* PBStructuredThirdViewController.h */,
+				A4402BA71CC8E0A3003136D8 /* PBStructuredThirdViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4402B921CC78E8E003136D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BA01CC881F1003136D8 /* PBStructuredChooseView.h */,
+				A4402BA11CC881F1003136D8 /* PBStructuredChooseView.m */,
+				A4402BA91CC8E618003136D8 /* PBStructuredTitleTableViewCell.h */,
+				A4402BAA1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m */,
+				A4402BAC1CCA0699003136D8 /* PBStructuredOptionTableViewCell.h */,
+				A4402BAD1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m */,
+				A4402BAF1CCA31E6003136D8 /* PBStructuredInputTableViewCell.h */,
+				A4402BB01CCA31E6003136D8 /* PBStructuredInputTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A4402B931CC78E99003136D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A449018D1CC497C800021EFF = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +245,7 @@
 			children = (
 				A44901F81CC4C47A00021EFF /* AppDelegate */,
 				A44901D51CC49FA300021EFF /* Base */,
+				A4402B901CC78E4F003136D8 /* StructuredProduct */,
 				A44901D61CC49FFE00021EFF /* Launch */,
 				A44901D71CC4A07A00021EFF /* Login */,
 				A44901D81CC4A08B00021EFF /* Register */,
@@ -296,6 +383,8 @@
 				A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */,
 				A44901FF1CC4EB2E00021EFF /* PBRegisterPasswordViewController.h */,
 				A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */,
+				A4402B8B1CC748AC003136D8 /* PBRegisterSuccessViewController.h */,
+				A4402B8C1CC748AC003136D8 /* PBRegisterSuccessViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -310,6 +399,8 @@
 		A44901E71CC4AE8A00021EFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4402B851CC7391C003136D8 /* PBRegisterDataModel.h */,
+				A4402B861CC7391C003136D8 /* PBRegisterDataModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,6 +423,8 @@
 				A44901EF1CC4B90C00021EFF /* PBBaseModel.m */,
 				A44902021CC5D5E400021EFF /* PBAnimator.h */,
 				A44902031CC5D5E400021EFF /* PBAnimator.m */,
+				A4402B9D1CC87759003136D8 /* PBButtonOnlyEngine.h */,
+				A4402B9E1CC87759003136D8 /* PBButtonOnlyEngine.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -341,6 +434,10 @@
 			children = (
 				A44901F41CC4BDD600021EFF /* PBWebView.h */,
 				A44901F51CC4BDD600021EFF /* PBWebView.m */,
+				A4402B881CC743E3003136D8 /* PBSmartPlaceholderTextField.h */,
+				A4402B891CC743E3003136D8 /* PBSmartPlaceholderTextField.m */,
+				A4402B9A1CC7967C003136D8 /* PBBorderedButton.h */,
+				A4402B9B1CC7967C003136D8 /* PBBorderedButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -424,6 +521,7 @@
 				TargetAttributes = {
 					A44901951CC497C800021EFF = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q98L84XUG2;
 					};
 					A44901AE1CC497C900021EFF = {
 						CreatedOnToolsVersion = 7.3;
@@ -536,17 +634,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44901DB1CC4A68700021EFF /* PBLoginMobileViewController.m in Sources */,
+				A4402B8D1CC748AC003136D8 /* PBRegisterSuccessViewController.m in Sources */,
+				A4402B961CC78F15003136D8 /* PBStructuredNavigationController.m in Sources */,
 				A44901F61CC4BDD600021EFF /* PBWebView.m in Sources */,
 				A44901DE1CC4A6A100021EFF /* PBLoginPasswordViewController.m in Sources */,
 				A44901F01CC4B90C00021EFF /* PBBaseModel.m in Sources */,
+				A4402BAB1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m in Sources */,
 				A449019E1CC497C800021EFF /* AppDelegate.m in Sources */,
+				A4402B8A1CC743E3003136D8 /* PBSmartPlaceholderTextField.m in Sources */,
 				A44902071CC5F30B00021EFF /* PBRegisterNavigationController.m in Sources */,
+				A4402BA51CC8CFD7003136D8 /* PBStructuredSecondViewController.m in Sources */,
+				A4402BA21CC881F1003136D8 /* PBStructuredChooseView.m in Sources */,
 				A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */,
+				A4402BAE1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m in Sources */,
 				A44901D41CC49D7400021EFF /* PBNavigationController.m in Sources */,
 				A449019B1CC497C800021EFF /* main.m in Sources */,
 				A44902041CC5D5E400021EFF /* PBAnimator.m in Sources */,
 				A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */,
+				A4402BA81CC8E0A3003136D8 /* PBStructuredThirdViewController.m in Sources */,
 				A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */,
+				A4402B9C1CC7967C003136D8 /* PBBorderedButton.m in Sources */,
+				A4402B871CC7391C003136D8 /* PBRegisterDataModel.m in Sources */,
+				A4402BB11CCA31E6003136D8 /* PBStructuredInputTableViewCell.m in Sources */,
+				A4402B9F1CC87759003136D8 /* PBButtonOnlyEngine.m in Sources */,
+				A4402B991CC793B4003136D8 /* PBStructuredFirstViewController.m in Sources */,
 				A44901D11CC49B0B00021EFF /* PBBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +800,8 @@
 			baseConfigurationReference = 757CC8A21AD8798964E230EC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZhuanTouPB/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhuanTouPB/Info.plist;
@@ -696,6 +809,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Momu.ZhuanTouPB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -704,6 +818,8 @@
 			baseConfigurationReference = 9E8942694027F7F8441629D7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZhuanTouPB/PrefixHeader.pch";
 				INFOPLIST_FILE = ZhuanTouPB/Info.plist;
@@ -711,6 +827,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Momu.ZhuanTouPB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

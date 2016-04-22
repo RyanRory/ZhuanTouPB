@@ -14,22 +14,22 @@
 
 @implementation PBRegisterMobileViewController
 
-@synthesize placeholderLabel, mobileTextField, descriptionLabel;
+@synthesize mobileTextField, descriptionLabel;
 
 #pragma ViewController LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self initNavigationBar];
 
-    [mobileTextField addTarget:self action:@selector(editingChanged:) forControlEvents:UIControlEventEditingChanged];
+    [mobileTextField setPlaceHolderText:@"请输入您的手机号码"];
+    [mobileTextField setPlaceHolderChangeText:@"手机号码"];
     mobileTextField.delegate = self;
-    
-    lastLength = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [mobileTextField becomeFirstResponder];
 }
 
@@ -42,6 +42,7 @@
 #pragma Navigation Function
 - (void)initNavigationBar
 {
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"CancelCross"] style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
     leftItem.tintColor = [UIColor whiteColor];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"NextArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(next:)];
@@ -60,27 +61,6 @@
 - (void)cancel:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma TextField Function
-- (void)shouldLabelAnimated:(UILabel*)sender textField:(UITextField*)textField
-{
-    if (textField.text.length == 1 && lastLength == 0)
-    {
-        sender.text = @"手机号码";
-        [PBAnimator labelAnimation:YES label:placeholderLabel];
-    }
-    if (textField.text.length == 0 && lastLength == 1)
-    {
-        sender.text= @"请输入您的手机号码";
-        [PBAnimator labelAnimation:NO label:placeholderLabel];
-    }
-    lastLength = textField.text.length;
-}
-
-- (void)editingChanged:(UITextField*)sender
-{
-    [self shouldLabelAnimated:placeholderLabel textField:sender];
 }
 
 #pragma TextField Delegate

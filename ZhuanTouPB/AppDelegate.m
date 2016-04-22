@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[IQKeyboardManager sharedManager] disableToolbarInViewControllerClass:[UIViewController class]];
+    [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:80.0f];
     return YES;
 }
 
@@ -40,6 +42,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier
+{
+    return YES;
 }
 
 @end

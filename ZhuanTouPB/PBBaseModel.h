@@ -11,5 +11,7 @@
 @interface PBBaseModel : NSObject
 
 + (BOOL)isCurrentViewControllerVisible:(UIViewController*)viewController;
++ (NSString*)formatterNumberWithoutDecimal:(NSNumber*)number;
++ (NSString*)formatterNumberWithDecimal:(NSNumber*)number;
 
 @end

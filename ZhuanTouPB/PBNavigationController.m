@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"TransparentBackground"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setShadowImage:[UIImage imageNamed:@"TransparentBackground"]];
 }
 
 - (void)didReceiveMemoryWarning {
