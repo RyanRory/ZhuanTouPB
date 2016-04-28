@@ -7,7 +7,17 @@
 //
 
 #import "PBBaseViewController.h"
+#import "PBLoginDataModel.h"
 
-@interface PBLoginPasswordViewController : PBBaseViewController
+#import "PBStockSourceViewController.h"
+
+@interface PBLoginPasswordViewController : PBBaseViewController<UITextFieldDelegate>
+{
+    PBLoginDataModel *dataModel;
+}
+
+@property (strong, nonatomic) IBOutlet PBSmartPlaceholderTextField *passwordTextField;
+@property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (strong, nonatomic) IBOutlet UIButton *secureEntryButton;
 
 @end

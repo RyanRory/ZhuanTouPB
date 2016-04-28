@@ -19,5 +19,6 @@
 
 - (void)setTitle:(NSString*)str;
 - (void)addButtons:(NSArray*)buttonTitleArray withMarginBetween:(float)between withMarginSides:(float)sides;
+- (void)setButtonsFontSize:(float)size;
 
 @end

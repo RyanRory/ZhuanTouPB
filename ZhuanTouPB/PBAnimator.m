@@ -32,14 +32,12 @@
 }
 
 //平移动画
-+ (void)transpositionAnimation:(UIView*)viewToTrans byValue:(NSValue*)value duration:(float)duration
++ (void)transpositionAnimation:(UIView*)viewToTrans toPoint:(CGPoint)point duration:(float)duration
 {
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-    animation.byValue = value;
-    animation.removedOnCompletion=NO;
-    animation.fillMode=kCAFillModeForwards;
-    [animation setDuration:duration];
-    [viewToTrans.layer addAnimation:animation forKey:nil];
+    [UIView beginAnimations:nil context:UIGraphicsGetCurrentContext()];
+    [UIView setAnimationDuration:duration];
+    viewToTrans.transform = CGAffineTransformMakeTranslation(point.x, point.y);
+    [UIView commitAnimations];
 }
 
 //透明度渐变动画

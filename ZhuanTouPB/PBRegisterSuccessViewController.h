@@ -10,5 +10,6 @@
 
 @interface PBRegisterSuccessViewController : PBBaseViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *toDiscoverButton;
 
 @end

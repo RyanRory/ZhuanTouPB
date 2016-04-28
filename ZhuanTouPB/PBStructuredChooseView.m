@@ -96,4 +96,14 @@
     }
 }
 
+- (void)setButtonsFontSize:(float)size
+{
+    NSArray *array = [NSArray arrayWithArray:[self.buttonOnlyEngine getButtons]];
+    for (int i=0; i<array.count; i++)
+    {
+        UIButton *button = array[i];
+        [button.titleLabel setFont:[UIFont systemFontOfSize:size]];
+    }
+}
+
 @end

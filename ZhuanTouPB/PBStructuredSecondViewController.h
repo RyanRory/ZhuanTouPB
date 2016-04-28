@@ -8,9 +8,14 @@
 
 #import "PBBaseViewController.h"
 #import "PBStructuredChooseView.h"
+#import "PBStructuredProductDataModel.h"
+
 #import "PBStructuredThirdViewController.h"
 
 @interface PBStructuredSecondViewController : PBBaseViewController<UITextFieldDelegate>
+{
+    PBStructuredProductDataModel *dataModel;
+}
 
 @property (strong, nonatomic) IBOutlet PBSmartPlaceholderTextField *posteriorTextField;
 @property (strong, nonatomic) IBOutlet PBStructuredChooseView *chooseView;

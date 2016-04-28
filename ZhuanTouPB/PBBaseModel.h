@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonDigest.h>
 
 @interface PBBaseModel : NSObject
 
 + (BOOL)isCurrentViewControllerVisible:(UIViewController*)viewController;
-+ (NSString*)formatterNumberWithoutDecimal:(NSNumber*)number;
-+ (NSString*)formatterNumberWithDecimal:(NSNumber*)number;
++ (NSString*)formatterNumberWithoutDecimal:(NSString*)number;
++ (NSString*)formatterNumberWithDecimal:(NSString*)number;
++ (NSString*)md5HexDigest:(NSString*)input;
++ (NSString*)boolToString:(BOOL)flag;
++ (void)saveToPlist:(NSString*)fileName data:(id)data;
++ (id)readFromPlist:(NSString*)fileName;
++ (BOOL)isExistenceNetwork;
++ (NSString*)deleteSpacesForString:(NSString*)str;
 
 @end

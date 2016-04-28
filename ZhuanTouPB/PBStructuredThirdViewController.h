@@ -10,10 +10,14 @@
 #import "PBStructuredTitleTableViewCell.h"
 #import "PBStructuredOptionTableViewCell.h"
 #import "PBStructuredInputTableViewCell.h"
+#import "PBStructuredProductDataModel.h"
+
+#import "PBStructuredSuccessViewController.h"
 
 @interface PBStructuredThirdViewController : PBBaseViewController<UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 {
-    NSMutableArray *data;
+    NSMutableArray *data, *chosenData;
+    PBStructuredProductDataModel *dataModel;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tView;

@@ -14,6 +14,7 @@
 {
     NSTimer *timer; //计时器
     int secondsCountDown; //秒数
+    PBRegisterDataModel *dataModel;
 }
 
 @property (strong, nonatomic) IBOutlet PBSmartPlaceholderTextField *smsCodeTextField;

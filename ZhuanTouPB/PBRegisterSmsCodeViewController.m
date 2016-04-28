@@ -28,6 +28,10 @@
     
     [smsCodeButton addTarget:self action:@selector(clickSmsCode:) forControlEvents:UIControlEventTouchUpInside];
     
+    dataModel = [PBRegisterDataModel shareInstance];
+    NSLog(@"%@",[dataModel getMobile]);
+    
+    self.errorLabel.alpha = 0;
     //进入页面自动发送验证码
     [self sendSmsCode:NO];
 }
@@ -36,6 +40,13 @@
 {
     [super viewWillAppear:animated];
     [smsCodeTextField becomeFirstResponder];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    PBNavigationController *nav = (PBNavigationController*)self.navigationController;
+    [nav setPageOfPageControl:1];
 }
 
 #pragma timer事件
@@ -64,9 +75,21 @@
 
 - (void)sendSmsCode:(BOOL)flag
 {
-    secondsCountDown = 60;
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeFireMethod) userInfo:nil repeats:YES];
-    [smsCodeButton setUserInteractionEnabled:NO];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *URL = [BASEURL stringByAppendingString:[NSString stringWithFormat:@"api/auth/sendRegisterSmsCode/%@/%@?vCode=%@", [dataModel getMobile], [PBBaseModel boolToString:flag], [dataModel getVCode]]];
+    [manager GET:URL parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject);
+        if ([NSString stringWithFormat:@"%@", [responseObject objectForKey:@"isSuccess"]].boolValue)
+        {
+            secondsCountDown = 60;
+            timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeFireMethod) userInfo:nil repeats:YES];
+            [smsCodeButton setUserInteractionEnabled:NO];
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+    }];
 }
 
 #pragma didReceiveMemoryWarning
@@ -80,17 +103,40 @@
 {
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"BackArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
     leftItem.tintColor = [UIColor whiteColor];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"NextArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(next:)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(next:)];
     rightItem.tintColor = [UIColor whiteColor];
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:[UIButton buttonWithType:UIButtonTypeCustom]];
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:leftItem, item, nil];
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:rightItem, item, nil];
+    
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:13], NSFontAttributeName,nil] forState:UIControlStateNormal];
 }
 
 - (void)next:(id)sender
 {
-    PBRegisterPasswordViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBRegisterPasswordViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *URL = [BASEURL stringByAppendingString:[NSString stringWithFormat:@"/api/auth/checkRegisterSmsCode/%@/%@", [dataModel getMobile], [self.smsCodeTextField getTextFieldStr]]];
+    [manager GET:URL parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject);
+        if ([NSString stringWithFormat:@"%@", [responseObject objectForKey:@"isSuccess"]].boolValue)
+        {
+            [dataModel setSmsCode:[self.smsCodeTextField getTextFieldStr]];
+            PBRegisterPasswordViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBRegisterPasswordViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else
+        {
+            errorLabel.text = [NSString stringWithFormat:@"%@", [responseObject objectForKey:@"errorMessage"]];
+            errorLabel.textColor = ERRORRED;
+            [PBAnimator transopacityAnimation:self.errorLabel fromValue:0 toValue:1 duration:0.2f];
+            [PBAnimator transpositionAnimation:self.descriptionLabel toPoint:CGPointMake(0, 24) duration:0.2f];
+            [PBAnimator shakeView:self.smsCodeTextField.textInputView];
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+    }];
 }
 
 - (void)back:(id)sender

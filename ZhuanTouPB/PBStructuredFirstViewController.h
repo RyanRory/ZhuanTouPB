@@ -8,9 +8,14 @@
 
 #import "PBBaseViewController.h"
 #import "PBStructuredChooseView.h"
+#import "PBStructuredProductDataModel.h"
+
 #import "PBStructuredSecondViewController.h"
 
 @interface PBStructuredFirstViewController : PBBaseViewController
+{
+    PBStructuredProductDataModel *dataModel;
+}
 
 @property (strong, nonatomic) IBOutlet PBStructuredChooseView *chooseView1;
 @property (strong, nonatomic) IBOutlet PBStructuredChooseView *chooseView2;

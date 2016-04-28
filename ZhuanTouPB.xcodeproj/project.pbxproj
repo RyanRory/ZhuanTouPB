@@ -11,7 +11,6 @@
 		A4402B871CC7391C003136D8 /* PBRegisterDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B861CC7391C003136D8 /* PBRegisterDataModel.m */; };
 		A4402B8A1CC743E3003136D8 /* PBSmartPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B891CC743E3003136D8 /* PBSmartPlaceholderTextField.m */; };
 		A4402B8D1CC748AC003136D8 /* PBRegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B8C1CC748AC003136D8 /* PBRegisterSuccessViewController.m */; };
-		A4402B961CC78F15003136D8 /* PBStructuredNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B951CC78F15003136D8 /* PBStructuredNavigationController.m */; };
 		A4402B991CC793B4003136D8 /* PBStructuredFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B981CC793B4003136D8 /* PBStructuredFirstViewController.m */; };
 		A4402B9C1CC7967C003136D8 /* PBBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B9B1CC7967C003136D8 /* PBBorderedButton.m */; };
 		A4402B9F1CC87759003136D8 /* PBButtonOnlyEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402B9E1CC87759003136D8 /* PBButtonOnlyEngine.m */; };
@@ -21,6 +20,38 @@
 		A4402BAB1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BAA1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m */; };
 		A4402BAE1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BAD1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m */; };
 		A4402BB11CCA31E6003136D8 /* PBStructuredInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BB01CCA31E6003136D8 /* PBStructuredInputTableViewCell.m */; };
+		A4402BB81CCDEFF7003136D8 /* PBStockSourceAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BB71CCDEFF7003136D8 /* PBStockSourceAddViewController.m */; };
+		A4402BBB1CCE0313003136D8 /* PBChooseListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BBA1CCE0313003136D8 /* PBChooseListView.m */; };
+		A4402BBE1CCE23F4003136D8 /* PBStockDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BBD1CCE23F4003136D8 /* PBStockDataModel.m */; };
+		A4402BC11CCE2423003136D8 /* PBSearchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BC01CCE2423003136D8 /* PBSearchEngine.m */; };
+		A4402BC41CCF3B76003136D8 /* PBStockSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BC31CCF3B76003136D8 /* PBStockSourceViewController.m */; };
+		A4402BC71CCF44A7003136D8 /* PBStockSourceButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BC61CCF44A7003136D8 /* PBStockSourceButtonTableViewCell.m */; };
+		A4402BCA1CCF4FA7003136D8 /* PBStockSourceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BC91CCF4FA7003136D8 /* PBStockSourceTableViewCell.m */; };
+		A4402BCD1CCF6576003136D8 /* PBStockSourceCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BCC1CCF6576003136D8 /* PBStockSourceCompleteViewController.m */; };
+		A4402BD01CCF690A003136D8 /* PBStructuredProductDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BCF1CCF690A003136D8 /* PBStructuredProductDataModel.m */; };
+		A4402BD31CCF7D10003136D8 /* PBLoginDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BD21CCF7D10003136D8 /* PBLoginDataModel.m */; };
+		A4402BDD1CD07C39003136D8 /* PBUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BDC1CD07C39003136D8 /* PBUserCenterViewController.m */; };
+		A4402BE01CD07F6C003136D8 /* PBUserCenterTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BDF1CD07F6C003136D8 /* PBUserCenterTopTableViewCell.m */; };
+		A4402BE31CD07F84003136D8 /* PBUserCenterLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BE21CD07F84003136D8 /* PBUserCenterLabelTableViewCell.m */; };
+		A4402BE61CD0989C003136D8 /* PBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BE51CD0989C003136D8 /* PBDiscoverViewController.m */; };
+		A4402BE91CD09CFB003136D8 /* PBDiscoverDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BE81CD09CFB003136D8 /* PBDiscoverDataTableViewCell.m */; };
+		A4402BEC1CD09D34003136D8 /* PBDiscoverServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BEB1CD09D34003136D8 /* PBDiscoverServiceTableViewCell.m */; };
+		A4402BEF1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BEE1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.m */; };
+		A4402BF31CD0A764003136D8 /* PBPageControlScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BF21CD0A764003136D8 /* PBPageControlScrollView.m */; };
+		A4402BF61CD0CFDD003136D8 /* PBDiscoverDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BF51CD0CFDD003136D8 /* PBDiscoverDataModel.m */; };
+		A4402BFE1CD1A4FD003136D8 /* PBBlanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402BFD1CD1A4FD003136D8 /* PBBlanceViewController.m */; };
+		A4402C011CD1A64E003136D8 /* PBBalanceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C001CD1A64E003136D8 /* PBBalanceTableViewCell.m */; };
+		A4402C041CD1A854003136D8 /* PBBalanceDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C031CD1A854003136D8 /* PBBalanceDataModel.m */; };
+		A4402C0C1CD1CEFF003136D8 /* PBSPProgressDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C0B1CD1CEFF003136D8 /* PBSPProgressDataModel.m */; };
+		A4402C0F1CD1CF1C003136D8 /* PBSSProgressDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C0E1CD1CF1C003136D8 /* PBSSProgressDataModel.m */; };
+		A4402C121CD1D51E003136D8 /* PBProgressTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C111CD1D51E003136D8 /* PBProgressTrackingViewController.m */; };
+		A4402C151CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C141CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m */; };
+		A4402C1D1CD1F9F2003136D8 /* PBStructuredSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C1C1CD1F9F1003136D8 /* PBStructuredSuccessViewController.m */; };
+		A4402C211CD2089A003136D8 /* PBMySPnSSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C201CD2089A003136D8 /* PBMySPnSSTableViewCell.m */; };
+		A4402C241CD208B5003136D8 /* PBMySPnSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C231CD208B5003136D8 /* PBMySPnSSViewController.m */; };
+		A4402C271CD20C0F003136D8 /* PBMySPDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C261CD20C0F003136D8 /* PBMySPDataModel.m */; };
+		A4402C2A1CD20C23003136D8 /* PBMySSDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C291CD20C23003136D8 /* PBMySSDataModel.m */; };
+		A4402C2D1CD21858003136D8 /* PBUserCenterDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C2C1CD21858003136D8 /* PBUserCenterDataModel.m */; };
 		A449019B1CC497C800021EFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A449019A1CC497C800021EFF /* main.m */; };
 		A449019E1CC497C800021EFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A449019D1CC497C800021EFF /* AppDelegate.m */; };
 		A44901A41CC497C800021EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44901A21CC497C800021EFF /* Main.storyboard */; };
@@ -38,7 +69,6 @@
 		A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */; };
 		A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */; };
 		A44902041CC5D5E400021EFF /* PBAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902031CC5D5E400021EFF /* PBAnimator.m */; };
-		A44902071CC5F30B00021EFF /* PBRegisterNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902061CC5F30B00021EFF /* PBRegisterNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +98,6 @@
 		A4402B891CC743E3003136D8 /* PBSmartPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSmartPlaceholderTextField.m; sourceTree = "<group>"; };
 		A4402B8B1CC748AC003136D8 /* PBRegisterSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterSuccessViewController.h; sourceTree = "<group>"; };
 		A4402B8C1CC748AC003136D8 /* PBRegisterSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterSuccessViewController.m; sourceTree = "<group>"; };
-		A4402B941CC78F15003136D8 /* PBStructuredNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredNavigationController.h; sourceTree = "<group>"; };
-		A4402B951CC78F15003136D8 /* PBStructuredNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredNavigationController.m; sourceTree = "<group>"; };
 		A4402B971CC793B4003136D8 /* PBStructuredFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredFirstViewController.h; sourceTree = "<group>"; };
 		A4402B981CC793B4003136D8 /* PBStructuredFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredFirstViewController.m; sourceTree = "<group>"; };
 		A4402B9A1CC7967C003136D8 /* PBBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBorderedButton.h; sourceTree = "<group>"; };
@@ -88,6 +116,70 @@
 		A4402BAD1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredOptionTableViewCell.m; sourceTree = "<group>"; };
 		A4402BAF1CCA31E6003136D8 /* PBStructuredInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredInputTableViewCell.h; sourceTree = "<group>"; };
 		A4402BB01CCA31E6003136D8 /* PBStructuredInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredInputTableViewCell.m; sourceTree = "<group>"; };
+		A4402BB61CCDEFF7003136D8 /* PBStockSourceAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStockSourceAddViewController.h; sourceTree = "<group>"; };
+		A4402BB71CCDEFF7003136D8 /* PBStockSourceAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStockSourceAddViewController.m; sourceTree = "<group>"; };
+		A4402BB91CCE0313003136D8 /* PBChooseListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBChooseListView.h; sourceTree = "<group>"; };
+		A4402BBA1CCE0313003136D8 /* PBChooseListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBChooseListView.m; sourceTree = "<group>"; };
+		A4402BBC1CCE23F4003136D8 /* PBStockDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStockDataModel.h; sourceTree = "<group>"; };
+		A4402BBD1CCE23F4003136D8 /* PBStockDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStockDataModel.m; sourceTree = "<group>"; };
+		A4402BBF1CCE2423003136D8 /* PBSearchEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSearchEngine.h; sourceTree = "<group>"; };
+		A4402BC01CCE2423003136D8 /* PBSearchEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSearchEngine.m; sourceTree = "<group>"; };
+		A4402BC21CCF3B76003136D8 /* PBStockSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStockSourceViewController.h; sourceTree = "<group>"; };
+		A4402BC31CCF3B76003136D8 /* PBStockSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStockSourceViewController.m; sourceTree = "<group>"; };
+		A4402BC51CCF44A7003136D8 /* PBStockSourceButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStockSourceButtonTableViewCell.h; sourceTree = "<group>"; };
+		A4402BC61CCF44A7003136D8 /* PBStockSourceButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStockSourceButtonTableViewCell.m; sourceTree = "<group>"; };
+		A4402BC81CCF4FA7003136D8 /* PBStockSourceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStockSourceTableViewCell.h; sourceTree = "<group>"; };
+		A4402BC91CCF4FA7003136D8 /* PBStockSourceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStockSourceTableViewCell.m; sourceTree = "<group>"; };
+		A4402BCB1CCF6575003136D8 /* PBStockSourceCompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStockSourceCompleteViewController.h; sourceTree = "<group>"; };
+		A4402BCC1CCF6576003136D8 /* PBStockSourceCompleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStockSourceCompleteViewController.m; sourceTree = "<group>"; };
+		A4402BCE1CCF690A003136D8 /* PBStructuredProductDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredProductDataModel.h; sourceTree = "<group>"; };
+		A4402BCF1CCF690A003136D8 /* PBStructuredProductDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredProductDataModel.m; sourceTree = "<group>"; };
+		A4402BD11CCF7D10003136D8 /* PBLoginDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLoginDataModel.h; sourceTree = "<group>"; };
+		A4402BD21CCF7D10003136D8 /* PBLoginDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLoginDataModel.m; sourceTree = "<group>"; };
+		A4402BDB1CD07C39003136D8 /* PBUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBUserCenterViewController.h; sourceTree = "<group>"; };
+		A4402BDC1CD07C39003136D8 /* PBUserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBUserCenterViewController.m; sourceTree = "<group>"; };
+		A4402BDE1CD07F6C003136D8 /* PBUserCenterTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBUserCenterTopTableViewCell.h; sourceTree = "<group>"; };
+		A4402BDF1CD07F6C003136D8 /* PBUserCenterTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBUserCenterTopTableViewCell.m; sourceTree = "<group>"; };
+		A4402BE11CD07F84003136D8 /* PBUserCenterLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBUserCenterLabelTableViewCell.h; sourceTree = "<group>"; };
+		A4402BE21CD07F84003136D8 /* PBUserCenterLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBUserCenterLabelTableViewCell.m; sourceTree = "<group>"; };
+		A4402BE41CD0989C003136D8 /* PBDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiscoverViewController.h; sourceTree = "<group>"; };
+		A4402BE51CD0989C003136D8 /* PBDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiscoverViewController.m; sourceTree = "<group>"; };
+		A4402BE71CD09CFB003136D8 /* PBDiscoverDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiscoverDataTableViewCell.h; sourceTree = "<group>"; };
+		A4402BE81CD09CFB003136D8 /* PBDiscoverDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiscoverDataTableViewCell.m; sourceTree = "<group>"; };
+		A4402BEA1CD09D34003136D8 /* PBDiscoverServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiscoverServiceTableViewCell.h; sourceTree = "<group>"; };
+		A4402BEB1CD09D34003136D8 /* PBDiscoverServiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiscoverServiceTableViewCell.m; sourceTree = "<group>"; };
+		A4402BED1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiscoverBannerTableViewCell.h; sourceTree = "<group>"; };
+		A4402BEE1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiscoverBannerTableViewCell.m; sourceTree = "<group>"; };
+		A4402BF11CD0A764003136D8 /* PBPageControlScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPageControlScrollView.h; sourceTree = "<group>"; };
+		A4402BF21CD0A764003136D8 /* PBPageControlScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPageControlScrollView.m; sourceTree = "<group>"; };
+		A4402BF41CD0CFDD003136D8 /* PBDiscoverDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiscoverDataModel.h; sourceTree = "<group>"; };
+		A4402BF51CD0CFDD003136D8 /* PBDiscoverDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiscoverDataModel.m; sourceTree = "<group>"; };
+		A4402BFC1CD1A4FD003136D8 /* PBBlanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBlanceViewController.h; sourceTree = "<group>"; };
+		A4402BFD1CD1A4FD003136D8 /* PBBlanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBlanceViewController.m; sourceTree = "<group>"; };
+		A4402BFF1CD1A64E003136D8 /* PBBalanceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBalanceTableViewCell.h; sourceTree = "<group>"; };
+		A4402C001CD1A64E003136D8 /* PBBalanceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBalanceTableViewCell.m; sourceTree = "<group>"; };
+		A4402C021CD1A854003136D8 /* PBBalanceDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBalanceDataModel.h; sourceTree = "<group>"; };
+		A4402C031CD1A854003136D8 /* PBBalanceDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBalanceDataModel.m; sourceTree = "<group>"; };
+		A4402C0A1CD1CEFF003136D8 /* PBSPProgressDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSPProgressDataModel.h; sourceTree = "<group>"; };
+		A4402C0B1CD1CEFF003136D8 /* PBSPProgressDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSPProgressDataModel.m; sourceTree = "<group>"; };
+		A4402C0D1CD1CF1C003136D8 /* PBSSProgressDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSSProgressDataModel.h; sourceTree = "<group>"; };
+		A4402C0E1CD1CF1C003136D8 /* PBSSProgressDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSSProgressDataModel.m; sourceTree = "<group>"; };
+		A4402C101CD1D51E003136D8 /* PBProgressTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBProgressTrackingViewController.h; sourceTree = "<group>"; };
+		A4402C111CD1D51E003136D8 /* PBProgressTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBProgressTrackingViewController.m; sourceTree = "<group>"; };
+		A4402C131CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBProgressTrackingTableViewCell.h; sourceTree = "<group>"; };
+		A4402C141CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBProgressTrackingTableViewCell.m; sourceTree = "<group>"; };
+		A4402C1B1CD1F9F1003136D8 /* PBStructuredSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredSuccessViewController.h; sourceTree = "<group>"; };
+		A4402C1C1CD1F9F1003136D8 /* PBStructuredSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredSuccessViewController.m; sourceTree = "<group>"; };
+		A4402C1F1CD2089A003136D8 /* PBMySPnSSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySPnSSTableViewCell.h; sourceTree = "<group>"; };
+		A4402C201CD2089A003136D8 /* PBMySPnSSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySPnSSTableViewCell.m; sourceTree = "<group>"; };
+		A4402C221CD208B5003136D8 /* PBMySPnSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySPnSSViewController.h; sourceTree = "<group>"; };
+		A4402C231CD208B5003136D8 /* PBMySPnSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySPnSSViewController.m; sourceTree = "<group>"; };
+		A4402C251CD20C0F003136D8 /* PBMySPDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySPDataModel.h; sourceTree = "<group>"; };
+		A4402C261CD20C0F003136D8 /* PBMySPDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySPDataModel.m; sourceTree = "<group>"; };
+		A4402C281CD20C23003136D8 /* PBMySSDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySSDataModel.h; sourceTree = "<group>"; };
+		A4402C291CD20C23003136D8 /* PBMySSDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySSDataModel.m; sourceTree = "<group>"; };
+		A4402C2B1CD21858003136D8 /* PBUserCenterDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBUserCenterDataModel.h; sourceTree = "<group>"; };
+		A4402C2C1CD21858003136D8 /* PBUserCenterDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBUserCenterDataModel.m; sourceTree = "<group>"; };
 		A44901961CC497C800021EFF /* ZhuanTouPB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuanTouPB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A449019A1CC497C800021EFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A449019C1CC497C800021EFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,8 +216,6 @@
 		A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterPasswordViewController.m; sourceTree = "<group>"; };
 		A44902021CC5D5E400021EFF /* PBAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAnimator.h; sourceTree = "<group>"; };
 		A44902031CC5D5E400021EFF /* PBAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAnimator.m; sourceTree = "<group>"; };
-		A44902051CC5F30B00021EFF /* PBRegisterNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterNavigationController.h; sourceTree = "<group>"; };
-		A44902061CC5F30B00021EFF /* PBRegisterNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,14 +274,14 @@
 		A4402B911CC78E85003136D8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4402B941CC78F15003136D8 /* PBStructuredNavigationController.h */,
-				A4402B951CC78F15003136D8 /* PBStructuredNavigationController.m */,
 				A4402B971CC793B4003136D8 /* PBStructuredFirstViewController.h */,
 				A4402B981CC793B4003136D8 /* PBStructuredFirstViewController.m */,
 				A4402BA31CC8CFD7003136D8 /* PBStructuredSecondViewController.h */,
 				A4402BA41CC8CFD7003136D8 /* PBStructuredSecondViewController.m */,
 				A4402BA61CC8E0A3003136D8 /* PBStructuredThirdViewController.h */,
 				A4402BA71CC8E0A3003136D8 /* PBStructuredThirdViewController.m */,
+				A4402C1B1CD1F9F1003136D8 /* PBStructuredSuccessViewController.h */,
+				A4402C1C1CD1F9F1003136D8 /* PBStructuredSuccessViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -214,6 +304,190 @@
 		A4402B931CC78E99003136D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4402BCE1CCF690A003136D8 /* PBStructuredProductDataModel.h */,
+				A4402BCF1CCF690A003136D8 /* PBStructuredProductDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A4402BB21CCDEFB2003136D8 /* StockSource */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BB31CCDEFC9003136D8 /* Model */,
+				A4402BB51CCDEFDC003136D8 /* View */,
+				A4402BB41CCDEFD5003136D8 /* Controller */,
+			);
+			name = StockSource;
+			sourceTree = "<group>";
+		};
+		A4402BB31CCDEFC9003136D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BBC1CCE23F4003136D8 /* PBStockDataModel.h */,
+				A4402BBD1CCE23F4003136D8 /* PBStockDataModel.m */,
+				A4402BBF1CCE2423003136D8 /* PBSearchEngine.h */,
+				A4402BC01CCE2423003136D8 /* PBSearchEngine.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A4402BB41CCDEFD5003136D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BC21CCF3B76003136D8 /* PBStockSourceViewController.h */,
+				A4402BC31CCF3B76003136D8 /* PBStockSourceViewController.m */,
+				A4402BB61CCDEFF7003136D8 /* PBStockSourceAddViewController.h */,
+				A4402BB71CCDEFF7003136D8 /* PBStockSourceAddViewController.m */,
+				A4402BCB1CCF6575003136D8 /* PBStockSourceCompleteViewController.h */,
+				A4402BCC1CCF6576003136D8 /* PBStockSourceCompleteViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4402BB51CCDEFDC003136D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BB91CCE0313003136D8 /* PBChooseListView.h */,
+				A4402BBA1CCE0313003136D8 /* PBChooseListView.m */,
+				A4402BC51CCF44A7003136D8 /* PBStockSourceButtonTableViewCell.h */,
+				A4402BC61CCF44A7003136D8 /* PBStockSourceButtonTableViewCell.m */,
+				A4402BC81CCF4FA7003136D8 /* PBStockSourceTableViewCell.h */,
+				A4402BC91CCF4FA7003136D8 /* PBStockSourceTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A4402BD71CD07BEB003136D8 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BDA1CD07C16003136D8 /* Model */,
+				A4402BD91CD07C10003136D8 /* View */,
+				A4402BD81CD07C09003136D8 /* Controller */,
+			);
+			name = UserCenter;
+			sourceTree = "<group>";
+		};
+		A4402BD81CD07C09003136D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BDB1CD07C39003136D8 /* PBUserCenterViewController.h */,
+				A4402BDC1CD07C39003136D8 /* PBUserCenterViewController.m */,
+				A4402BFC1CD1A4FD003136D8 /* PBBlanceViewController.h */,
+				A4402BFD1CD1A4FD003136D8 /* PBBlanceViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4402BD91CD07C10003136D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BDE1CD07F6C003136D8 /* PBUserCenterTopTableViewCell.h */,
+				A4402BDF1CD07F6C003136D8 /* PBUserCenterTopTableViewCell.m */,
+				A4402BE11CD07F84003136D8 /* PBUserCenterLabelTableViewCell.h */,
+				A4402BE21CD07F84003136D8 /* PBUserCenterLabelTableViewCell.m */,
+				A4402BFF1CD1A64E003136D8 /* PBBalanceTableViewCell.h */,
+				A4402C001CD1A64E003136D8 /* PBBalanceTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A4402BDA1CD07C16003136D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4402C021CD1A854003136D8 /* PBBalanceDataModel.h */,
+				A4402C031CD1A854003136D8 /* PBBalanceDataModel.m */,
+				A4402C2B1CD21858003136D8 /* PBUserCenterDataModel.h */,
+				A4402C2C1CD21858003136D8 /* PBUserCenterDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A4402BF81CD1A4A4003136D8 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BFB1CD1A4C3003136D8 /* Model */,
+				A4402BFA1CD1A4BC003136D8 /* View */,
+				A4402BF91CD1A4B0003136D8 /* Controller */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		A4402BF91CD1A4B0003136D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BE41CD0989C003136D8 /* PBDiscoverViewController.h */,
+				A4402BE51CD0989C003136D8 /* PBDiscoverViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4402BFA1CD1A4BC003136D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BE71CD09CFB003136D8 /* PBDiscoverDataTableViewCell.h */,
+				A4402BE81CD09CFB003136D8 /* PBDiscoverDataTableViewCell.m */,
+				A4402BEA1CD09D34003136D8 /* PBDiscoverServiceTableViewCell.h */,
+				A4402BEB1CD09D34003136D8 /* PBDiscoverServiceTableViewCell.m */,
+				A4402BED1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.h */,
+				A4402BEE1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.m */,
+				A4402BF11CD0A764003136D8 /* PBPageControlScrollView.h */,
+				A4402BF21CD0A764003136D8 /* PBPageControlScrollView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A4402BFB1CD1A4C3003136D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4402BF41CD0CFDD003136D8 /* PBDiscoverDataModel.h */,
+				A4402BF51CD0CFDD003136D8 /* PBDiscoverDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A4402C061CD1CDED003136D8 /* ProgressTracking */ = {
+			isa = PBXGroup;
+			children = (
+				A4402C091CD1CEB8003136D8 /* Model */,
+				A4402C081CD1CEB2003136D8 /* View */,
+				A4402C071CD1CEAB003136D8 /* Controller */,
+			);
+			name = ProgressTracking;
+			sourceTree = "<group>";
+		};
+		A4402C071CD1CEAB003136D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4402C101CD1D51E003136D8 /* PBProgressTrackingViewController.h */,
+				A4402C111CD1D51E003136D8 /* PBProgressTrackingViewController.m */,
+				A4402C221CD208B5003136D8 /* PBMySPnSSViewController.h */,
+				A4402C231CD208B5003136D8 /* PBMySPnSSViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4402C081CD1CEB2003136D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4402C131CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.h */,
+				A4402C141CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m */,
+				A4402C1F1CD2089A003136D8 /* PBMySPnSSTableViewCell.h */,
+				A4402C201CD2089A003136D8 /* PBMySPnSSTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A4402C091CD1CEB8003136D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4402C0A1CD1CEFF003136D8 /* PBSPProgressDataModel.h */,
+				A4402C0B1CD1CEFF003136D8 /* PBSPProgressDataModel.m */,
+				A4402C0D1CD1CF1C003136D8 /* PBSSProgressDataModel.h */,
+				A4402C0E1CD1CF1C003136D8 /* PBSSProgressDataModel.m */,
+				A4402C251CD20C0F003136D8 /* PBMySPDataModel.h */,
+				A4402C261CD20C0F003136D8 /* PBMySPDataModel.m */,
+				A4402C281CD20C23003136D8 /* PBMySSDataModel.h */,
+				A4402C291CD20C23003136D8 /* PBMySSDataModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -245,7 +519,11 @@
 			children = (
 				A44901F81CC4C47A00021EFF /* AppDelegate */,
 				A44901D51CC49FA300021EFF /* Base */,
+				A4402BF81CD1A4A4003136D8 /* Discover */,
+				A4402BD71CD07BEB003136D8 /* UserCenter */,
+				A4402BB21CCDEFB2003136D8 /* StockSource */,
 				A4402B901CC78E4F003136D8 /* StructuredProduct */,
+				A4402C061CD1CDED003136D8 /* ProgressTracking */,
 				A44901D61CC49FFE00021EFF /* Launch */,
 				A44901D71CC4A07A00021EFF /* Login */,
 				A44901D81CC4A08B00021EFF /* Register */,
@@ -340,6 +618,8 @@
 		A44901E01CC4AE4F00021EFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4402BD11CCF7D10003136D8 /* PBLoginDataModel.h */,
+				A4402BD21CCF7D10003136D8 /* PBLoginDataModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -375,8 +655,6 @@
 		A44901E51CC4AE7C00021EFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A44902051CC5F30B00021EFF /* PBRegisterNavigationController.h */,
-				A44902061CC5F30B00021EFF /* PBRegisterNavigationController.m */,
 				A44901F91CC4EAFD00021EFF /* PBRegisterMobileViewController.h */,
 				A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */,
 				A44901FC1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.h */,
@@ -633,31 +911,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4402BE31CD07F84003136D8 /* PBUserCenterLabelTableViewCell.m in Sources */,
+				A4402C2A1CD20C23003136D8 /* PBMySSDataModel.m in Sources */,
 				A44901DB1CC4A68700021EFF /* PBLoginMobileViewController.m in Sources */,
+				A4402BF31CD0A764003136D8 /* PBPageControlScrollView.m in Sources */,
+				A4402C151CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m in Sources */,
 				A4402B8D1CC748AC003136D8 /* PBRegisterSuccessViewController.m in Sources */,
-				A4402B961CC78F15003136D8 /* PBStructuredNavigationController.m in Sources */,
+				A4402BD31CCF7D10003136D8 /* PBLoginDataModel.m in Sources */,
+				A4402BDD1CD07C39003136D8 /* PBUserCenterViewController.m in Sources */,
+				A4402BCD1CCF6576003136D8 /* PBStockSourceCompleteViewController.m in Sources */,
 				A44901F61CC4BDD600021EFF /* PBWebView.m in Sources */,
 				A44901DE1CC4A6A100021EFF /* PBLoginPasswordViewController.m in Sources */,
+				A4402BBE1CCE23F4003136D8 /* PBStockDataModel.m in Sources */,
+				A4402C0C1CD1CEFF003136D8 /* PBSPProgressDataModel.m in Sources */,
 				A44901F01CC4B90C00021EFF /* PBBaseModel.m in Sources */,
+				A4402C121CD1D51E003136D8 /* PBProgressTrackingViewController.m in Sources */,
 				A4402BAB1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m in Sources */,
+				A4402BE61CD0989C003136D8 /* PBDiscoverViewController.m in Sources */,
 				A449019E1CC497C800021EFF /* AppDelegate.m in Sources */,
+				A4402C211CD2089A003136D8 /* PBMySPnSSTableViewCell.m in Sources */,
 				A4402B8A1CC743E3003136D8 /* PBSmartPlaceholderTextField.m in Sources */,
-				A44902071CC5F30B00021EFF /* PBRegisterNavigationController.m in Sources */,
+				A4402BEF1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.m in Sources */,
+				A4402BFE1CD1A4FD003136D8 /* PBBlanceViewController.m in Sources */,
+				A4402BC11CCE2423003136D8 /* PBSearchEngine.m in Sources */,
+				A4402BD01CCF690A003136D8 /* PBStructuredProductDataModel.m in Sources */,
 				A4402BA51CC8CFD7003136D8 /* PBStructuredSecondViewController.m in Sources */,
+				A4402BCA1CCF4FA7003136D8 /* PBStockSourceTableViewCell.m in Sources */,
 				A4402BA21CC881F1003136D8 /* PBStructuredChooseView.m in Sources */,
+				A4402BB81CCDEFF7003136D8 /* PBStockSourceAddViewController.m in Sources */,
+				A4402BEC1CD09D34003136D8 /* PBDiscoverServiceTableViewCell.m in Sources */,
+				A4402C1D1CD1F9F2003136D8 /* PBStructuredSuccessViewController.m in Sources */,
+				A4402C0F1CD1CF1C003136D8 /* PBSSProgressDataModel.m in Sources */,
+				A4402BC71CCF44A7003136D8 /* PBStockSourceButtonTableViewCell.m in Sources */,
+				A4402C011CD1A64E003136D8 /* PBBalanceTableViewCell.m in Sources */,
 				A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */,
 				A4402BAE1CCA0699003136D8 /* PBStructuredOptionTableViewCell.m in Sources */,
+				A4402C271CD20C0F003136D8 /* PBMySPDataModel.m in Sources */,
+				A4402BBB1CCE0313003136D8 /* PBChooseListView.m in Sources */,
+				A4402BE01CD07F6C003136D8 /* PBUserCenterTopTableViewCell.m in Sources */,
 				A44901D41CC49D7400021EFF /* PBNavigationController.m in Sources */,
 				A449019B1CC497C800021EFF /* main.m in Sources */,
 				A44902041CC5D5E400021EFF /* PBAnimator.m in Sources */,
+				A4402C041CD1A854003136D8 /* PBBalanceDataModel.m in Sources */,
+				A4402C241CD208B5003136D8 /* PBMySPnSSViewController.m in Sources */,
 				A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */,
 				A4402BA81CC8E0A3003136D8 /* PBStructuredThirdViewController.m in Sources */,
 				A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */,
+				A4402BF61CD0CFDD003136D8 /* PBDiscoverDataModel.m in Sources */,
+				A4402C2D1CD21858003136D8 /* PBUserCenterDataModel.m in Sources */,
 				A4402B9C1CC7967C003136D8 /* PBBorderedButton.m in Sources */,
+				A4402BE91CD09CFB003136D8 /* PBDiscoverDataTableViewCell.m in Sources */,
 				A4402B871CC7391C003136D8 /* PBRegisterDataModel.m in Sources */,
 				A4402BB11CCA31E6003136D8 /* PBStructuredInputTableViewCell.m in Sources */,
 				A4402B9F1CC87759003136D8 /* PBButtonOnlyEngine.m in Sources */,
 				A4402B991CC793B4003136D8 /* PBStructuredFirstViewController.m in Sources */,
+				A4402BC41CCF3B76003136D8 /* PBStockSourceViewController.m in Sources */,
 				A44901D11CC49B0B00021EFF /* PBBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

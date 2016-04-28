@@ -23,11 +23,18 @@
     [self initNavigationBar];
     
     data = [NSMutableArray arrayWithObjects:@"期货趋势交易", @"期货跨期、同类跨品种套利", @"股指、国债、贵金属期现套利", @"股票对冲策略(Alpha)", @"股票投机", @"上证50ETF期权相关交易", @"债券策略(包括交易所债券、国债期货、分期A)", @"QDII相关策略", @"其他", nil];
+    chosenData = [[NSMutableArray alloc]init];
+    
+    [[IQKeyboardManager sharedManager] setShouldResignOnTouchOutside:YES];
+    
+    dataModel = [PBStructuredProductDataModel shareInstance];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    PBNavigationController *nav = (PBNavigationController*)self.navigationController;
+    [nav setPageOfPageControl:2];
 }
 
 #pragma didReceiveMemoryWarning
@@ -47,7 +54,31 @@
 
 - (void)next:(id)sender
 {
+    [dataModel set:chosenData forKey:@"TradeStrategies"];
+    PBStructuredInputTableViewCell *cell = [tView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:data.count+1]];
+    [dataModel set:[cell.textField getTextFieldStr] forKey:@"ExpectedSeniorCost"];
     
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *URL = [BASEURL stringByAppendingString:[NSString stringWithFormat:@"api/struct/sendStructReq"]];
+    NSDictionary *parameters = [NSDictionary dictionaryWithDictionary:[dataModel getDictionary]];
+    NSLog(@"%@",parameters);
+    [manager POST:URL parameters:parameters success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject);
+        if ([NSString stringWithFormat:@"%@", [responseObject objectForKey:@"isSuccess"]].boolValue)
+        {
+            PBStructuredSuccessViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBStructuredSuccessViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else
+        {
+            
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+    }];
+
 }
 
 - (void)back:(id)sender
@@ -125,6 +156,7 @@
         cell.textField.delegate = self;
         [cell.textField setPlaceHolderText:@"您期待的优先级资金成本是"];
         [cell.textField setPlaceHolderChangeText:@"优先级资金成本"];
+        [cell.textField setPercentEntry:YES];
         
         return cell;
     }
@@ -135,7 +167,7 @@
         {
             cell = [[PBStructuredOptionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PBStructuredOptionTableViewCell"];
         }
-        cell.checkboxImage.image = [UIImage imageNamed:@"CancelCross"];
+        cell.checkboxImage.image = [UIImage imageNamed:@"CheckBoxUnselected"];
         cell.contentLabel.text = [NSString stringWithFormat:@"%@",[data objectAtIndex:indexPath.section-1]];
         [cell setIsSelected:NO];
         
@@ -152,12 +184,14 @@
         if (![cell isSelectedOrNot])
         {
             [cell setIsSelected:YES];
-            cell.checkboxImage.image = [UIImage imageNamed:@"BackArrow"];
+            cell.checkboxImage.image = [UIImage imageNamed:@"CheckBoxSelected"];
+            [chosenData addObject:[data objectAtIndex:indexPath.section-1]];
         }
         else
         {
             [cell setIsSelected:NO];
-            cell.checkboxImage.image = [UIImage imageNamed:@"CancelCross"];
+            cell.checkboxImage.image = [UIImage imageNamed:@"CheckBoxUnselected"];
+            [chosenData removeObject:[data objectAtIndex:indexPath.section-1]];
         }
     }
 }

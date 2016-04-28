@@ -10,4 +10,10 @@
 
 @interface PBNavigationController : UINavigationController
 
+@property (strong, nonatomic) UIPageControl *pageControl;
+
+- (void)showPageControl:(int)number;
+- (void)dismissPageControl;
+- (void)setPageOfPageControl:(int)page;
+
 @end

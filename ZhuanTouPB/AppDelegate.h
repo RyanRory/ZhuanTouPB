@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PBStockDataModel.h"
+#import "PBDiscoverDataModel.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

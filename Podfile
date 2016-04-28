@@ -3,3 +3,5 @@ pod “AFNetworking”, ”~> 2.5.4”
 pod 'MJRefresh'
 pod 'SCNumberKeyBoard’
 pod ’IQKeyboardManager‘
+pod ‘Reachability’
+pod 'SDWebImage’

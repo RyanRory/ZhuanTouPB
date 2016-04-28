@@ -23,8 +23,8 @@
 
 - (void)addButton:(PBBorderedButton*)button
 {
-    [buttons addObject:button];
     button.tag = buttons.count;
+    [buttons addObject:button];
     [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -50,6 +50,12 @@
 - (int)getSelectedButtonTag
 {
     return  selectedTag;
+}
+
+- (NSString*)getSelectedButtonTitle
+{
+    UIButton *button = buttons[selectedTag];
+    return button.titleLabel.text;
 }
 
 - (NSArray*)getButtons

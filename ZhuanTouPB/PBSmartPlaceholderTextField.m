@@ -24,6 +24,7 @@
     {
         [self initPlaceHolderLabel];
         [self addTarget:self action:@selector(editingChanged:) forControlEvents:UIControlEventEditingChanged];
+        [self addTarget:self action:@selector(editingDidEnd:) forControlEvents:UIControlEventEditingDidEnd];
         lastLength = 0;
         self.clipsToBounds = NO;
     }
@@ -36,6 +37,7 @@
     {
         [self initPlaceHolderLabel];
         [self addTarget:self action:@selector(editingChanged:) forControlEvents:UIControlEventEditingChanged];
+        [self addTarget:self action:@selector(editingDidEnd:) forControlEvents:UIControlEventEditingDidEnd];
         lastLength = 0;
         self.clipsToBounds = NO;
     }
@@ -48,10 +50,20 @@
     {
         [self initPlaceHolderLabel];
         [self addTarget:self action:@selector(editingChanged:) forControlEvents:UIControlEventEditingChanged];
+        [self addTarget:self action:@selector(editingDidEnd:) forControlEvents:UIControlEventEditingDidEnd];
         lastLength = 0;
         self.clipsToBounds = NO;
     }
     return self;
+}
+
+- (void)setText:(NSString *)text
+{
+    [super setText:text];
+    if (!isNumberFomatterEntry)
+    {
+        textFieldStr = text;
+    }
 }
 
 //初始化placeholderLabel
@@ -87,28 +99,41 @@
 //设置是否安全输入
 - (void)setSecureTextEntry:(BOOL)flag
 {
+    NSString *str = self.text;
+    self.text = @"";
+    [super setSecureTextEntry:flag];
     isSecureTextEntry = flag;
-    if (flag)
-    {
-        if (self.text.length > 0)
-        {
-            self.text = @"";
-            for (int i=0; i<textFieldStr.length; i++)
-            {
-                self.text = [self.text stringByAppendingString:@"*"];
-            }
-        }
-    }
-    else
-    {
-        self.text = textFieldStr;
-    }
+    self.text = str;
 }
 
 //设置是否格式化数字输入
-- (void)setNumberFomatterEntry:(BOOL)flag
+- (void)setNumberFomatterEntry:(BOOL)flag Decimal:(BOOL)decimal
 {
     isNumberFomatterEntry = flag;
+    isDecimal = decimal;
+}
+
+//设置是否输入的是百分比
+- (void)setPercentEntry:(BOOL)flag
+{
+    isPercentEntry = flag;
+    if (flag)
+    {
+        self.percentIconLabel = [[UILabel alloc]initWithFrame:self.bounds];
+        [self addSubview:self.percentIconLabel];
+        NSMutableAttributedString *aStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%%", placeholderText]];
+        [aStr addAttribute:NSForegroundColorAttributeName value:[UIColor clearColor] range:NSMakeRange(0, placeholderText.length)];
+        [aStr addAttribute:NSFontAttributeName value:self.placeholderLabel.font range:NSMakeRange(0, placeholderText.length)];
+        [aStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(placeholderText.length, 1)];
+        [aStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:[self.font pointSize]*0.6] range:NSMakeRange(placeholderText.length, 1)];
+        self.percentIconLabel.attributedText = aStr;
+    }
+}
+
+//设置是否是输入股票代码
+- (void)setStockEntry:(BOOL)flag
+{
+    isStockEntry = flag;
 }
 
 //输入监听
@@ -129,28 +154,45 @@
 
 - (void)editingChanged:(UITextField*)sender
 {
-    //实现textfield安全输入，记录textfield实际文字
-    if (sender.text.length > lastLength)
+    textFieldStr = self.text;
+    //输入百分比
+    if (isPercentEntry)
     {
-        if (isSecureTextEntry && lastLength > 0)
+        if (textFieldStr.length == 0)
         {
-            self.text = [self.text stringByReplacingCharactersInRange:NSMakeRange(lastLength-1, 1) withString:@"*"];
+            NSMutableAttributedString *aStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%%", placeholderText]];
+            [aStr addAttribute:NSForegroundColorAttributeName value:[UIColor clearColor] range:NSMakeRange(0, placeholderText.length)];
+            [aStr addAttribute:NSFontAttributeName value:self.placeholderLabel.font range:NSMakeRange(0, placeholderText.length)];
+            [aStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(placeholderText.length, 1)];
+            [aStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:[self.font pointSize]*0.6] range:NSMakeRange(placeholderText.length, 1)];
+            self.percentIconLabel.attributedText = aStr;
         }
-        textFieldStr = [textFieldStr stringByAppendingString:[self.text substringWithRange:NSMakeRange(lastLength, 1)]];
-        if (isNumberFomatterEntry && lastLength > 0)
+        else
         {
-            self.text = [PBBaseModel formatterNumberWithoutDecimal:[NSNumber numberWithDouble:textFieldStr.doubleValue]];
-        }
-    }
-    else
-    {
-        textFieldStr = [textFieldStr substringWithRange:NSMakeRange(0, textFieldStr.length+self.text.length-lastLength)];
-        if (isNumberFomatterEntry && self.text.length > 0)
-        {
-            self.text = [PBBaseModel formatterNumberWithoutDecimal:[NSNumber numberWithDouble:textFieldStr.doubleValue]];
+            NSMutableAttributedString *aStr = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%%", self.text]];
+            [aStr addAttribute:NSForegroundColorAttributeName value:[UIColor clearColor] range:NSMakeRange(0, self.text.length)];
+            [aStr addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, self.text.length)];
+            [aStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(self.text.length, 1)];
+            [aStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:[self.font pointSize]*0.6] range:NSMakeRange(self.text.length, 1)];
+            self.percentIconLabel.attributedText = aStr;
         }
     }
     [self shouldLabelAnimated:sender];
+}
+
+- (void)editingDidEnd:(UITextField *)sender
+{
+    if (isNumberFomatterEntry)
+    {
+        if ([self.text rangeOfString:@"."].location != NSNotFound)
+        {
+            self.text = [PBBaseModel formatterNumberWithDecimal:textFieldStr];
+        }
+        else
+        {
+            self.text = [PBBaseModel formatterNumberWithoutDecimal:textFieldStr];
+        }
+    }
 }
 
 //动画

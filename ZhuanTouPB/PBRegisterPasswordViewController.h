@@ -9,8 +9,12 @@
 #import "PBBaseViewController.h"
 #import "PBRegisterDataModel.h"
 #import "PBRegisterSuccessViewController.h"
+#import "PBStructuredFirstViewController.h"
 
 @interface PBRegisterPasswordViewController : PBBaseViewController<UITextFieldDelegate>
+{
+    PBRegisterDataModel *dataModel;
+}
 
 @property (strong, nonatomic) IBOutlet PBSmartPlaceholderTextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;

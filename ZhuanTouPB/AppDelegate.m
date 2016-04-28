@@ -19,6 +19,17 @@
     // Override point for customization after application launch.
     [[IQKeyboardManager sharedManager] disableToolbarInViewControllerClass:[UIViewController class]];
     [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:80.0f];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    NSMutableArray *stocks = [PBBaseModel readFromPlist:STOCKSFILE];
+    if (stocks.count == 0 || [PBBaseModel isExistenceNetwork])
+    {
+        [self getStocks];
+    }
+    
+    [PBDiscoverDataModel shareInstance];
+    
     return YES;
 }
 
@@ -46,7 +57,29 @@
 
 - (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier
 {
+//    if ([extensionPointIdentifier isEqualToString:@"com.apple.keyboard-service"])
+//    {
+//        return NO;
+//    }
+    
     return YES;
+}
+
+- (void)getStocks
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *URL = [BASEURL stringByAppendingString:[NSString stringWithFormat:@"api/settings/allStocks"]];
+    [manager GET:URL parameters:nil success:^(AFHTTPRequestOperation *operation, NSArray *responseObject) {
+        NSLog(@"%@", responseObject);
+        
+        [PBBaseModel saveToPlist:STOCKSFILE data:responseObject];
+        [[PBStockDataModel shareInstance] setStocksArray:responseObject];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+    }];
+    
 }
 
 @end

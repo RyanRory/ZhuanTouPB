@@ -29,12 +29,21 @@
     
     secureEntryButton.selected = YES;
     [secureEntryButton addTarget:self action:@selector(isSecureTextEntry:) forControlEvents:UIControlEventTouchUpInside];
+    
+    dataModel = [PBRegisterDataModel shareInstance];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [passwordTextField becomeFirstResponder];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    PBNavigationController *nav = (PBNavigationController*)self.navigationController;
+    [nav setPageOfPageControl:2];
 }
 
 #pragma didReceiveMemoryWarning
@@ -64,17 +73,41 @@
 {
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"BackArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
     leftItem.tintColor = [UIColor whiteColor];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"NextArrow"] style:UIBarButtonItemStylePlain target:self action:@selector(next:)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(next:)];
     rightItem.tintColor = [UIColor whiteColor];
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:[UIButton buttonWithType:UIButtonTypeCustom]];
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:leftItem, item, nil];
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:rightItem, item, nil];
+    
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:13], NSFontAttributeName,nil] forState:UIControlStateNormal];
 }
 
 - (void)next:(id)sender
 {
-    PBRegisterSuccessViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBRegisterSuccessViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSString *URL = [BASEURL stringByAppendingString:[NSString stringWithFormat:@"api/auth/register"]];
+    NSDictionary *parameters = @{@"mobilePhone":[dataModel getMobile],
+                                 @"smsCode":[dataModel getSmsCode],
+                                 @"password":[self.passwordTextField getTextFieldStr]};
+    [manager POST:URL parameters:parameters success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        NSLog(@"%@", responseObject);
+        if ([NSString stringWithFormat:@"%@", [responseObject objectForKey:@"isSuccess"]].boolValue)
+        {
+            [dataModel setPassword:[self.passwordTextField getTextFieldStr]];
+            PBRegisterSuccessViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBRegisterSuccessViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else
+        {
+            descriptionLabel.text = [NSString stringWithFormat:@"%@", [responseObject objectForKey:@"errorMessage"]];
+            descriptionLabel.textColor = ERRORRED;
+            [PBAnimator shakeView:self.passwordTextField.textInputView];
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+    }];
 }
 
 - (void)back:(id)sender
@@ -90,5 +123,6 @@
     [self next:nil];
     return YES;
 }
+
 
 @end

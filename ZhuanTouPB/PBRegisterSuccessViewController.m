@@ -14,13 +14,32 @@
 
 @implementation PBRegisterSuccessViewController
 
+@synthesize toDiscoverButton;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self initNavigationBar];
+    
+    [toDiscoverButton addTarget:self action:@selector(toDiscover:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initNavigationBar
+{
+    PBNavigationController *nav = (PBNavigationController*)self.navigationController;
+    [nav dismissPageControl];
+    self.navigationItem.backBarButtonItem = nil;
+}
+
+- (void)toDiscover:(id)sender
+{
+    PBNavigationController *nav = [[self storyboard]instantiateViewControllerWithIdentifier:@"MainNav"];
+    [self.navigationController presentViewController:nav animated:NO completion:nil];
 }
 
 

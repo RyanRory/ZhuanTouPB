@@ -13,17 +13,19 @@
     unsigned long lastLength;
     NSString *placeholderText;
     NSString *placeholderChangedText;
-    BOOL isSecureTextEntry, isNumberFomatterEntry;
+    BOOL isSecureTextEntry, isNumberFomatterEntry, isDecimal, isPercentEntry, isStockEntry;
     NSString *textFieldStr;
 }
 
 @property (strong, nonatomic) UILabel *placeholderLabel;
+@property (strong, nonatomic) UILabel *percentIconLabel;
 
 - (void)setPlaceHolderText:(NSString*)str;
 - (void)setPlaceHolderChangeText:(NSString*)str;
 - (NSString*)getTextFieldStr;
 - (void)setSecureTextEntry:(BOOL)flag;
-- (void)setNumberFomatterEntry:(BOOL)flag;
-
+- (void)setNumberFomatterEntry:(BOOL)flag Decimal:(BOOL)decimal;
+- (void)setPercentEntry:(BOOL)flag;
+- (void)setStockEntry:(BOOL)flag;
 
 @end

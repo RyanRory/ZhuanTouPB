@@ -22,11 +22,6 @@ static PBRegisterDataModel *instance = nil;
     return instance ;
 }
 
-+ (id)allocWithZone:(struct _NSZone *)zone
-{
-    return [PBRegisterDataModel shareInstance] ;
-}
-
 - (id)copyWithZone:(struct _NSZone *)zone
 {
     return [PBRegisterDataModel shareInstance] ;
@@ -70,6 +65,16 @@ static PBRegisterDataModel *instance = nil;
 - (NSString*)getPassword
 {
     return  password;
+}
+
+- (void)setVCode:(NSString*)str
+{
+    vCode = str;
+}
+
+- (NSString*)getVCode
+{
+    return vCode;
 }
 
 @end

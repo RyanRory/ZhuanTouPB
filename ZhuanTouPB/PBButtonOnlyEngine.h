@@ -16,6 +16,7 @@
 
 - (void)addButton:(PBBorderedButton*)button;
 - (int)getSelectedButtonTag;
+- (NSString*)getSelectedButtonTitle;
 - (NSArray*)getButtons;
 
 @end

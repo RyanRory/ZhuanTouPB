@@ -10,4 +10,7 @@
 
 @interface PBBaseViewController : UIViewController
 
+- (void)refreshData;
+- (void)showError;
+
 @end

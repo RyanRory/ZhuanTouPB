@@ -11,6 +11,9 @@
 #import "PBRegisterSmsCodeViewController.h"
 
 @interface PBRegisterMobileViewController : PBBaseViewController<UITextFieldDelegate, UIGestureRecognizerDelegate>
+{
+    PBRegisterDataModel *dataModel;
+}
 
 @property (strong, nonatomic) IBOutlet PBSmartPlaceholderTextField *mobileTextField;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;

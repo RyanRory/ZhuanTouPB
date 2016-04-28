@@ -10,11 +10,10 @@
 
 @interface PBRegisterDataModel : PBBaseModel
 {
-    NSString *mobile, *smsCode, *password;
+    NSString *mobile, *smsCode, *password, *vCode;
 }
 
 + (instancetype)shareInstance;
-+ (id)allocWithZone:(struct _NSZone *)zone;
 
 - (void)setMobile:(NSString*)str;
 - (NSString*)getMobile;
@@ -22,5 +21,7 @@
 - (NSString*)getSmsCode;
 - (void)setPassword:(NSString*)str;
 - (NSString*)getPassword;
+- (void)setVCode:(NSString*)str;
+- (NSString*)getVCode;
 
 @end
