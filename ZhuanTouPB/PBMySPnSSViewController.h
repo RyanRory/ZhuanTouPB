@@ -7,11 +7,13 @@
 //
 
 #import "PBBaseViewController.h"
-#import "PBMySPnSSTableViewCell.h"
+#import "PBMySPTableViewCell.h"
+#import "PBMySSTableViewCell.h"
 #import "PBMySPDataModel.h"
 #import "PBMySSDataModel.h"
 
 #import "PBProgressTrackingViewController.h"
+#import "PBSSRelatedViewController.h"
 
 @interface PBMySPnSSViewController : PBBaseViewController<UITableViewDelegate, UITableViewDataSource>
 {

@@ -47,11 +47,19 @@
 		A4402C121CD1D51E003136D8 /* PBProgressTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C111CD1D51E003136D8 /* PBProgressTrackingViewController.m */; };
 		A4402C151CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C141CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m */; };
 		A4402C1D1CD1F9F2003136D8 /* PBStructuredSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C1C1CD1F9F1003136D8 /* PBStructuredSuccessViewController.m */; };
-		A4402C211CD2089A003136D8 /* PBMySPnSSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C201CD2089A003136D8 /* PBMySPnSSTableViewCell.m */; };
+		A4402C211CD2089A003136D8 /* PBMySPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C201CD2089A003136D8 /* PBMySPTableViewCell.m */; };
 		A4402C241CD208B5003136D8 /* PBMySPnSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C231CD208B5003136D8 /* PBMySPnSSViewController.m */; };
 		A4402C271CD20C0F003136D8 /* PBMySPDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C261CD20C0F003136D8 /* PBMySPDataModel.m */; };
 		A4402C2A1CD20C23003136D8 /* PBMySSDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C291CD20C23003136D8 /* PBMySSDataModel.m */; };
 		A4402C2D1CD21858003136D8 /* PBUserCenterDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C2C1CD21858003136D8 /* PBUserCenterDataModel.m */; };
+		A4402C301CDB0D8E003136D8 /* PBSSAchievementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C2F1CDB0D8E003136D8 /* PBSSAchievementTableViewCell.m */; };
+		A4402C331CDB0DE8003136D8 /* PBSSDrawTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C321CDB0DE8003136D8 /* PBSSDrawTableViewCell.m */; };
+		A4402C361CDB0EDC003136D8 /* PBSSRelatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C351CDB0EDC003136D8 /* PBSSRelatedViewController.m */; };
+		A4402C391CDB15BB003136D8 /* PBSSDrawDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C381CDB15BB003136D8 /* PBSSDrawDataModel.m */; };
+		A4402C3C1CDB1630003136D8 /* PBSSAchievementDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C3B1CDB1630003136D8 /* PBSSAchievementDataModel.m */; };
+		A4402C3F1CDB22B6003136D8 /* PBMySSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C3E1CDB22B6003136D8 /* PBMySSTableViewCell.m */; };
+		A4402C421CDB2366003136D8 /* PBSSInformationCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C411CDB2366003136D8 /* PBSSInformationCellView.m */; };
+		A4402C451CDB4AAB003136D8 /* PBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4402C441CDB4AAB003136D8 /* PBWebViewController.m */; };
 		A449019B1CC497C800021EFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A449019A1CC497C800021EFF /* main.m */; };
 		A449019E1CC497C800021EFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A449019D1CC497C800021EFF /* AppDelegate.m */; };
 		A44901A41CC497C800021EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44901A21CC497C800021EFF /* Main.storyboard */; };
@@ -64,7 +72,6 @@
 		A44901DB1CC4A68700021EFF /* PBLoginMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901DA1CC4A68700021EFF /* PBLoginMobileViewController.m */; };
 		A44901DE1CC4A6A100021EFF /* PBLoginPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901DD1CC4A6A100021EFF /* PBLoginPasswordViewController.m */; };
 		A44901F01CC4B90C00021EFF /* PBBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901EF1CC4B90C00021EFF /* PBBaseModel.m */; };
-		A44901F61CC4BDD600021EFF /* PBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901F51CC4BDD600021EFF /* PBWebView.m */; };
 		A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */; };
 		A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44901FD1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m */; };
 		A44902011CC4EB2E00021EFF /* PBRegisterPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44902001CC4EB2E00021EFF /* PBRegisterPasswordViewController.m */; };
@@ -170,8 +177,8 @@
 		A4402C141CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBProgressTrackingTableViewCell.m; sourceTree = "<group>"; };
 		A4402C1B1CD1F9F1003136D8 /* PBStructuredSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBStructuredSuccessViewController.h; sourceTree = "<group>"; };
 		A4402C1C1CD1F9F1003136D8 /* PBStructuredSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBStructuredSuccessViewController.m; sourceTree = "<group>"; };
-		A4402C1F1CD2089A003136D8 /* PBMySPnSSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySPnSSTableViewCell.h; sourceTree = "<group>"; };
-		A4402C201CD2089A003136D8 /* PBMySPnSSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySPnSSTableViewCell.m; sourceTree = "<group>"; };
+		A4402C1F1CD2089A003136D8 /* PBMySPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySPTableViewCell.h; sourceTree = "<group>"; };
+		A4402C201CD2089A003136D8 /* PBMySPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySPTableViewCell.m; sourceTree = "<group>"; };
 		A4402C221CD208B5003136D8 /* PBMySPnSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySPnSSViewController.h; sourceTree = "<group>"; };
 		A4402C231CD208B5003136D8 /* PBMySPnSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySPnSSViewController.m; sourceTree = "<group>"; };
 		A4402C251CD20C0F003136D8 /* PBMySPDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySPDataModel.h; sourceTree = "<group>"; };
@@ -180,6 +187,22 @@
 		A4402C291CD20C23003136D8 /* PBMySSDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySSDataModel.m; sourceTree = "<group>"; };
 		A4402C2B1CD21858003136D8 /* PBUserCenterDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBUserCenterDataModel.h; sourceTree = "<group>"; };
 		A4402C2C1CD21858003136D8 /* PBUserCenterDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBUserCenterDataModel.m; sourceTree = "<group>"; };
+		A4402C2E1CDB0D8E003136D8 /* PBSSAchievementTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSSAchievementTableViewCell.h; sourceTree = "<group>"; };
+		A4402C2F1CDB0D8E003136D8 /* PBSSAchievementTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSSAchievementTableViewCell.m; sourceTree = "<group>"; };
+		A4402C311CDB0DE8003136D8 /* PBSSDrawTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSSDrawTableViewCell.h; sourceTree = "<group>"; };
+		A4402C321CDB0DE8003136D8 /* PBSSDrawTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSSDrawTableViewCell.m; sourceTree = "<group>"; };
+		A4402C341CDB0EDC003136D8 /* PBSSRelatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSSRelatedViewController.h; sourceTree = "<group>"; };
+		A4402C351CDB0EDC003136D8 /* PBSSRelatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSSRelatedViewController.m; sourceTree = "<group>"; };
+		A4402C371CDB15BB003136D8 /* PBSSDrawDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSSDrawDataModel.h; sourceTree = "<group>"; };
+		A4402C381CDB15BB003136D8 /* PBSSDrawDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSSDrawDataModel.m; sourceTree = "<group>"; };
+		A4402C3A1CDB1630003136D8 /* PBSSAchievementDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSSAchievementDataModel.h; sourceTree = "<group>"; };
+		A4402C3B1CDB1630003136D8 /* PBSSAchievementDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSSAchievementDataModel.m; sourceTree = "<group>"; };
+		A4402C3D1CDB22B6003136D8 /* PBMySSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMySSTableViewCell.h; sourceTree = "<group>"; };
+		A4402C3E1CDB22B6003136D8 /* PBMySSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMySSTableViewCell.m; sourceTree = "<group>"; };
+		A4402C401CDB2366003136D8 /* PBSSInformationCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSSInformationCellView.h; sourceTree = "<group>"; };
+		A4402C411CDB2366003136D8 /* PBSSInformationCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSSInformationCellView.m; sourceTree = "<group>"; };
+		A4402C431CDB4AAB003136D8 /* PBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebViewController.h; sourceTree = "<group>"; };
+		A4402C441CDB4AAB003136D8 /* PBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebViewController.m; sourceTree = "<group>"; };
 		A44901961CC497C800021EFF /* ZhuanTouPB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhuanTouPB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A449019A1CC497C800021EFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A449019C1CC497C800021EFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -206,8 +229,6 @@
 		A44901DD1CC4A6A100021EFF /* PBLoginPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLoginPasswordViewController.m; sourceTree = "<group>"; };
 		A44901EE1CC4B90C00021EFF /* PBBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBaseModel.h; sourceTree = "<group>"; };
 		A44901EF1CC4B90C00021EFF /* PBBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBaseModel.m; sourceTree = "<group>"; };
-		A44901F41CC4BDD600021EFF /* PBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebView.h; sourceTree = "<group>"; };
-		A44901F51CC4BDD600021EFF /* PBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebView.m; sourceTree = "<group>"; };
 		A44901F91CC4EAFD00021EFF /* PBRegisterMobileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterMobileViewController.h; sourceTree = "<group>"; };
 		A44901FA1CC4EAFD00021EFF /* PBRegisterMobileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRegisterMobileViewController.m; sourceTree = "<group>"; };
 		A44901FC1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRegisterSmsCodeViewController.h; sourceTree = "<group>"; };
@@ -445,14 +466,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		A4402C061CD1CDED003136D8 /* ProgressTracking */ = {
+		A4402C061CD1CDED003136D8 /* MySPnSS */ = {
 			isa = PBXGroup;
 			children = (
 				A4402C091CD1CEB8003136D8 /* Model */,
 				A4402C081CD1CEB2003136D8 /* View */,
 				A4402C071CD1CEAB003136D8 /* Controller */,
 			);
-			name = ProgressTracking;
+			name = MySPnSS;
 			sourceTree = "<group>";
 		};
 		A4402C071CD1CEAB003136D8 /* Controller */ = {
@@ -462,6 +483,8 @@
 				A4402C111CD1D51E003136D8 /* PBProgressTrackingViewController.m */,
 				A4402C221CD208B5003136D8 /* PBMySPnSSViewController.h */,
 				A4402C231CD208B5003136D8 /* PBMySPnSSViewController.m */,
+				A4402C341CDB0EDC003136D8 /* PBSSRelatedViewController.h */,
+				A4402C351CDB0EDC003136D8 /* PBSSRelatedViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -471,8 +494,16 @@
 			children = (
 				A4402C131CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.h */,
 				A4402C141CD1D7E1003136D8 /* PBProgressTrackingTableViewCell.m */,
-				A4402C1F1CD2089A003136D8 /* PBMySPnSSTableViewCell.h */,
-				A4402C201CD2089A003136D8 /* PBMySPnSSTableViewCell.m */,
+				A4402C1F1CD2089A003136D8 /* PBMySPTableViewCell.h */,
+				A4402C201CD2089A003136D8 /* PBMySPTableViewCell.m */,
+				A4402C2E1CDB0D8E003136D8 /* PBSSAchievementTableViewCell.h */,
+				A4402C2F1CDB0D8E003136D8 /* PBSSAchievementTableViewCell.m */,
+				A4402C311CDB0DE8003136D8 /* PBSSDrawTableViewCell.h */,
+				A4402C321CDB0DE8003136D8 /* PBSSDrawTableViewCell.m */,
+				A4402C401CDB2366003136D8 /* PBSSInformationCellView.h */,
+				A4402C411CDB2366003136D8 /* PBSSInformationCellView.m */,
+				A4402C3D1CDB22B6003136D8 /* PBMySSTableViewCell.h */,
+				A4402C3E1CDB22B6003136D8 /* PBMySSTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -488,6 +519,10 @@
 				A4402C261CD20C0F003136D8 /* PBMySPDataModel.m */,
 				A4402C281CD20C23003136D8 /* PBMySSDataModel.h */,
 				A4402C291CD20C23003136D8 /* PBMySSDataModel.m */,
+				A4402C371CDB15BB003136D8 /* PBSSDrawDataModel.h */,
+				A4402C381CDB15BB003136D8 /* PBSSDrawDataModel.m */,
+				A4402C3A1CDB1630003136D8 /* PBSSAchievementDataModel.h */,
+				A4402C3B1CDB1630003136D8 /* PBSSAchievementDataModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -523,7 +558,7 @@
 				A4402BD71CD07BEB003136D8 /* UserCenter */,
 				A4402BB21CCDEFB2003136D8 /* StockSource */,
 				A4402B901CC78E4F003136D8 /* StructuredProduct */,
-				A4402C061CD1CDED003136D8 /* ProgressTracking */,
+				A4402C061CD1CDED003136D8 /* MySPnSS */,
 				A44901D61CC49FFE00021EFF /* Launch */,
 				A44901D71CC4A07A00021EFF /* Login */,
 				A44901D81CC4A08B00021EFF /* Register */,
@@ -690,6 +725,8 @@
 				A44901D01CC49B0B00021EFF /* PBBaseViewController.m */,
 				A44901D21CC49D7400021EFF /* PBNavigationController.h */,
 				A44901D31CC49D7400021EFF /* PBNavigationController.m */,
+				A4402C431CDB4AAB003136D8 /* PBWebViewController.h */,
+				A4402C441CDB4AAB003136D8 /* PBWebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -710,8 +747,6 @@
 		A44901EA1CC4AEC500021EFF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A44901F41CC4BDD600021EFF /* PBWebView.h */,
-				A44901F51CC4BDD600021EFF /* PBWebView.m */,
 				A4402B881CC743E3003136D8 /* PBSmartPlaceholderTextField.h */,
 				A4402B891CC743E3003136D8 /* PBSmartPlaceholderTextField.m */,
 				A4402B9A1CC7967C003136D8 /* PBBorderedButton.h */,
@@ -911,6 +946,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4402C3F1CDB22B6003136D8 /* PBMySSTableViewCell.m in Sources */,
+				A4402C421CDB2366003136D8 /* PBSSInformationCellView.m in Sources */,
 				A4402BE31CD07F84003136D8 /* PBUserCenterLabelTableViewCell.m in Sources */,
 				A4402C2A1CD20C23003136D8 /* PBMySSDataModel.m in Sources */,
 				A44901DB1CC4A68700021EFF /* PBLoginMobileViewController.m in Sources */,
@@ -920,7 +957,6 @@
 				A4402BD31CCF7D10003136D8 /* PBLoginDataModel.m in Sources */,
 				A4402BDD1CD07C39003136D8 /* PBUserCenterViewController.m in Sources */,
 				A4402BCD1CCF6576003136D8 /* PBStockSourceCompleteViewController.m in Sources */,
-				A44901F61CC4BDD600021EFF /* PBWebView.m in Sources */,
 				A44901DE1CC4A6A100021EFF /* PBLoginPasswordViewController.m in Sources */,
 				A4402BBE1CCE23F4003136D8 /* PBStockDataModel.m in Sources */,
 				A4402C0C1CD1CEFF003136D8 /* PBSPProgressDataModel.m in Sources */,
@@ -929,13 +965,17 @@
 				A4402BAB1CC8E618003136D8 /* PBStructuredTitleTableViewCell.m in Sources */,
 				A4402BE61CD0989C003136D8 /* PBDiscoverViewController.m in Sources */,
 				A449019E1CC497C800021EFF /* AppDelegate.m in Sources */,
-				A4402C211CD2089A003136D8 /* PBMySPnSSTableViewCell.m in Sources */,
+				A4402C391CDB15BB003136D8 /* PBSSDrawDataModel.m in Sources */,
+				A4402C211CD2089A003136D8 /* PBMySPTableViewCell.m in Sources */,
 				A4402B8A1CC743E3003136D8 /* PBSmartPlaceholderTextField.m in Sources */,
 				A4402BEF1CD09D4A003136D8 /* PBDiscoverBannerTableViewCell.m in Sources */,
 				A4402BFE1CD1A4FD003136D8 /* PBBlanceViewController.m in Sources */,
+				A4402C331CDB0DE8003136D8 /* PBSSDrawTableViewCell.m in Sources */,
+				A4402C301CDB0D8E003136D8 /* PBSSAchievementTableViewCell.m in Sources */,
 				A4402BC11CCE2423003136D8 /* PBSearchEngine.m in Sources */,
 				A4402BD01CCF690A003136D8 /* PBStructuredProductDataModel.m in Sources */,
 				A4402BA51CC8CFD7003136D8 /* PBStructuredSecondViewController.m in Sources */,
+				A4402C451CDB4AAB003136D8 /* PBWebViewController.m in Sources */,
 				A4402BCA1CCF4FA7003136D8 /* PBStockSourceTableViewCell.m in Sources */,
 				A4402BA21CC881F1003136D8 /* PBStructuredChooseView.m in Sources */,
 				A4402BB81CCDEFF7003136D8 /* PBStockSourceAddViewController.m in Sources */,
@@ -956,6 +996,7 @@
 				A4402C241CD208B5003136D8 /* PBMySPnSSViewController.m in Sources */,
 				A44901FB1CC4EAFD00021EFF /* PBRegisterMobileViewController.m in Sources */,
 				A4402BA81CC8E0A3003136D8 /* PBStructuredThirdViewController.m in Sources */,
+				A4402C3C1CDB1630003136D8 /* PBSSAchievementDataModel.m in Sources */,
 				A44901FE1CC4EB1600021EFF /* PBRegisterSmsCodeViewController.m in Sources */,
 				A4402BF61CD0CFDD003136D8 /* PBDiscoverDataModel.m in Sources */,
 				A4402C2D1CD21858003136D8 /* PBUserCenterDataModel.m in Sources */,
@@ -964,6 +1005,7 @@
 				A4402B871CC7391C003136D8 /* PBRegisterDataModel.m in Sources */,
 				A4402BB11CCA31E6003136D8 /* PBStructuredInputTableViewCell.m in Sources */,
 				A4402B9F1CC87759003136D8 /* PBButtonOnlyEngine.m in Sources */,
+				A4402C361CDB0EDC003136D8 /* PBSSRelatedViewController.m in Sources */,
 				A4402B991CC793B4003136D8 /* PBStructuredFirstViewController.m in Sources */,
 				A4402BC41CCF3B76003136D8 /* PBStockSourceViewController.m in Sources */,
 				A44901D11CC49B0B00021EFF /* PBBaseViewController.m in Sources */,

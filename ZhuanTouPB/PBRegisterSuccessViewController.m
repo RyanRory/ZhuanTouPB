@@ -33,7 +33,7 @@
 {
     PBNavigationController *nav = (PBNavigationController*)self.navigationController;
     [nav dismissPageControl];
-    self.navigationItem.backBarButtonItem = nil;
+    [self.navigationItem setHidesBackButton:YES];
 }
 
 - (void)toDiscover:(id)sender

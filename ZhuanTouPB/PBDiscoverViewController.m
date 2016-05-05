@@ -81,7 +81,7 @@
     {
         return 44;
     }
-    return (SCREEN_HEIGHT-141-200.0*SCREEN_WIDTH/320)/[dataModel getServiceDescs].count-10 > (SCREEN_HEIGHT-136-200.0*SCREEN_WIDTH/320)/2-10 ? (SCREEN_HEIGHT-141-200.0*SCREEN_WIDTH/320)/[dataModel getServiceDescs].count-10 :(SCREEN_HEIGHT-136-200.0*SCREEN_WIDTH/320)/2-10;
+    return (SCREEN_HEIGHT-141-200.0*SCREEN_WIDTH/320)/[dataModel getServiceDescs].count-5 > (SCREEN_HEIGHT-136-200.0*SCREEN_WIDTH/320)/2-5 ? (SCREEN_HEIGHT-141-200.0*SCREEN_WIDTH/320)/[dataModel getServiceDescs].count-5 :(SCREEN_HEIGHT-136-200.0*SCREEN_WIDTH/320)/2-5;
     
 }
 
@@ -145,7 +145,7 @@
         }
         else
         {
-            [cell.background sd_setImageWithURL:[NSURL URLWithString:[data objectForKey:@"url"]]];
+            [cell.background sd_setImageWithURL:[NSURL URLWithString:[data objectForKey:@"bgImage"]]];
         }
         cell.titleLabel.text = [data objectForKey:@"title"];
         cell.descriptionLabel.text = [data objectForKey:@"shortNote"];
@@ -157,10 +157,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.row == 0)
+    if (indexPath.row > 2)
     {
-        NSLog(@"wewewewew");
+        PBWebViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBWebViewController"];
+        vc.url = [[[dataModel getServiceDescs] objectAtIndex:indexPath.row-3] objectForKey:@"url"];
+        [self.navigationController pushViewController:vc animated:YES];
     }
+    
     
 }
 

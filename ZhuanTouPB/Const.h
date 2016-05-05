@@ -18,6 +18,8 @@
 
 #define STRUCTUREDPRODUCT @"STRUCTUREDPRODUCT"
 #define STOCKSOURCE @"STOCKSOURCE"
+#define SSDRAW @"SSDRAW"
+#define SSACHIEVEMENT @"SSACHIEVEMENT"
 
 #define STRUCTUREDPRODUCTBLUE ([UIColor colorWithRed:3.0/255.0 green:110.0/255.0 blue:183.0/255.0 alpha:1.0f])
 #define STOCKSOURCEBLUE ([UIColor colorWithRed:33.0/255.0 green:205.0/255.0 blue:236.0/255.0 alpha:1.0f])

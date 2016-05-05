@@ -56,9 +56,24 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:[UIButton buttonWithType:UIButtonTypeCustom]];
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:leftItem, item, nil];
 }
+
 - (void)cancel:(id)sender
 {
     [self.navigationController popToViewController:self.navigationController.viewControllers[1] animated:YES];
+}
+
+- (void)toSSDraw:(id)sender
+{
+    PBSSRelatedViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBSSRelatedViewController"];
+    vc.style = SSDRAW;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)toSSAchievement:(id)sender
+{
+    PBSSRelatedViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"PBSSRelatedViewController"];
+    vc.style = SSACHIEVEMENT;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma refreshData
@@ -94,7 +109,15 @@
 #pragma TableViewDelegate/DataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 107;
+    if ([self.style isEqualToString:STRUCTUREDPRODUCT])
+    {
+    return 109;
+    }
+    else
+    {
+        PBMySSTableViewCell *cell = (PBMySSTableViewCell*)[self tableView:tView cellForRowAtIndexPath:indexPath];
+        return cell.frame.size.height;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -128,18 +151,16 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PBMySPnSSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PBMySPnSSTableViewCell"];
-    if (!cell)
-    {
-        cell = [[PBMySPnSSTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PBMySPnSSTableViewCell"];
-    }
-    id data = cellObjects[indexPath.section];
     if ([self.style isEqualToString:STRUCTUREDPRODUCT])
     {
+        PBMySPTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PBMySPTableViewCell"];
+        if (!cell)
+        {
+            cell = [[PBMySPTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PBMySPTableViewCell"];
+        }
+        id data = cellObjects[indexPath.section];
+        
         cell.titleLabel.text = @"结构化产品申请";
-        cell.SSLabel1.text = @"";
-        cell.SSLabel2.text = @"";
-        cell.SSLabel3.text = @"";
         cell.timeLabel.text = [data objectForKey:@"time"];
         cell.statusLabel.text = [data objectForKey:@"status"];
         cell.SPLabel1.text = [NSString stringWithFormat:@"劣后规模:%@",[PBBaseModel formatterNumberWithDecimal:[data objectForKey:@"seniorAmount"]]];
@@ -156,15 +177,30 @@
                 cell.statusNoteLabel.textColor = styleColor;
             }
         }
+        
+        return cell;
     }
     else
     {
-        cell.titleLabel.text = @"券源申报";
-        cell.SPLabel1.text = @"";
-        cell.SPLabel2.text = @"";
+        PBMySSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PBMySSTableViewCell"];
+        if (!cell)
+        {
+            cell = [[PBMySSTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"PBMySSTableViewCell"];
+        }
+        id data = cellObjects[indexPath.section];
+        
+        cell.modeLabel.text = [data objectForKey:@"mode"];
+        cell.cycleLabel.text = [data objectForKey:@"cycle"];
+        cell.progressLabel.text = [data objectForKey:@"status"];
+        cell.achievementTimeLabel.text = [data objectForKey:@"achievementTime"];
+        cell.achievementAmountLabel.text = [NSString stringWithFormat:@"%@元",[data objectForKey:@"achievementAmount"]];
+        cell.timeLabel.text = [NSString stringWithFormat:@"上次更新时间:%@",[data objectForKey:@"time"]];
+        [cell setStocks:[NSArray arrayWithArray:[data objectForKey:@"stocks"]]];
+        [cell.toDrawButton addTarget:self action:@selector(toSSDraw:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.toAchievementButton addTarget:self action:@selector(toSSAchievement:) forControlEvents:UIControlEventTouchUpInside];
+        
+        return cell;
     }
-    
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

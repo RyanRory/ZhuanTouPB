@@ -1,14 +1,14 @@
 //
-//  PBMySPnSSTableViewCell.m
+//  PBSSDrawTableViewCell.m
 //  ZhuanTouPB
 //
-//  Created by 赵润声 on 16/4/28.
+//  Created by 赵润声 on 16/5/5.
 //  Copyright © 2016年 ShanghaiMomuFinancialInformationServiceCo.,Ltd. All rights reserved.
 //
 
-#import "PBMySPnSSTableViewCell.h"
+#import "PBSSDrawTableViewCell.h"
 
-@implementation PBMySPnSSTableViewCell
+@implementation PBSSDrawTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

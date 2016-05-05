@@ -12,6 +12,7 @@
 #import  <UIKit/UIKit.h>
 
 #import "PBNavigationController.h"
+#import "PBWebViewController.h"
 
 #import "PBBaseModel.h"
 #import "PBAnimator.h"
